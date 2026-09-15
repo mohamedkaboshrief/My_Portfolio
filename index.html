@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohamed Khaled Aboshrief | Computer Science &amp; Engineering Student | Machine Learning Engineer</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Portfolio of Mohamed Khaled Aboshrief, third-year Computer Science & Engineering student at Menoufia University focused on Classical Machine Learning, problem solving, and practical software development.">
+  <meta name="keywords"
+    content="Mohamed Khaled Aboshrief, Machine Learning, Classical ML, Computer Science, Menoufia University, Data Preprocessing, Python, C++, Codeforces, DEPI">
+  <meta name="author" content="Mohamed Khaled Aboshrief">
+  <meta name="color-scheme" content="dark light">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title"
+    content="Mohamed Khaled Aboshrief | Computer Science &amp; Engineering Student | Machine Learning">
+  <meta property="og:description"
+    content="Portfolio of Mohamed Khaled Aboshrief, third-year Computer Science & Engineering student focused on Classical Machine Learning and practical software projects.">
+  <meta property="og:type" content="website">
+
+  <!-- Prevent Theme Toggle Flash of Unstyled Content (FOUC) -->
+  <script>
+    (function () {
+      try {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') {
+          document.documentElement.setAttribute('data-theme', 'light');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- =========================================================================
+       1. Navigation Header
+       ========================================================================= -->
+  <header class="site-header" id="header">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-brand" aria-label="Mohamed Khaled Aboshrief Homepage">
+        <span class="brand-monogram">MK</span>
+        <span class="nav-brand-text">Mohamed Khaled</span>
+      </a>
+
+      <!-- Desktop & Mobile Navigation Links -->
+      <nav class="nav-links" id="nav-links" aria-label="Main Navigation">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#competitive" class="nav-link">Competitive Coding</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#focus" class="nav-link">Focus</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Header Actions: Theme Toggle & Mobile Menu -->
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle dark and light theme"
+          title="Toggle theme">
+          <!-- Sun Icon (shown in light mode) -->
+          <svg class="icon-sun" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+          <!-- Moon Icon (shown in dark mode) -->
+          <svg class="icon-moon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+
+        <button type="button" class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Open mobile navigation menu"
+          aria-expanded="false" aria-controls="nav-links">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       2. Hero Section
+       ========================================================================= -->
+  <section class="hero-section" id="hero">
+    <div class="hero-ambient-bg" aria-hidden="true"></div>
+    <div class="container hero-grid">
+
+      <!-- Hero Content Column -->
+      <div class="hero-content">
+        <div class="hero-status-pill">
+          <span class="status-dot"></span>
+          <span>3rd Year CS &amp; Engineering &bull; DEPI Microsoft ML Trainee</span>
+        </div>
+
+        <span class="hero-greeting">Hello, I am</span>
+        <h1 class="hero-name">Mohamed Khaled Aboshrief</h1>
+        <h2 class="hero-title">
+          Computer Science &amp; Engineering Student | <span class="highlight">Machine Learning Engineer</span>
+        </h2>
+
+        <p class="hero-description">
+          Focused on Classical Machine Learning, problem solving, and building practical software projects. Building a
+          rigorous foundation in algorithms and data systems while progressing toward Deep Learning and AI Engineering.
+        </p>
+
+        <!-- CTA Button Group -->
+        <div class="hero-cta-group">
+          <a href="#projects" class="btn btn-primary">
+            <span>View Projects</span>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <span>Contact Me</span>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </a>
+          <a href="https://github.com/mohamedkaboshrief" target="_blank" rel="noopener noreferrer"
+            class="btn btn-secondary">
+            <span>View GitHub</span>
+            <svg fill="currentColor" viewBox="0 0 24 24">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Hero Quick Stats Row -->
+        <div class="hero-stats-row">
+          <div class="hero-stat-item">
+            <span class="hero-stat-value">3.38</span>
+            <span class="hero-stat-label">Academic GPA</span>
+          </div>
+          <div class="hero-stat-item">
+            <span class="hero-stat-value">2023–2028</span>
+            <span class="hero-stat-label">B.Sc. In Progress</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Image Column -->
+      <div class="hero-image-wrap">
+        <div class="image-frame">
+          <img src="assets/images/profile.jpg" alt="Mohamed Khaled Aboshrief - Computer Science and Engineering Student"
+            width="400" height="500">
+
+          <!-- Floating decorative badges -->
+          <div class="floating-badge badge-top-left" aria-hidden="true">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            <span>Computer Science</span>
+          </div>
+
+          <div class="floating-badge badge-bottom-right" aria-hidden="true">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+            <span>Classical ML</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       3. About Section
+       ========================================================================= -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-title-wrap reveal-on-scroll">
+        <span class="section-badge">Background</span>
+        <h2 class="section-title">About Me</h2>
+        <p class="section-desc">Engineering student with a strong technical foundation in computational theory,
+          algorithm design, and Machine Learning.</p>
+      </div>
+
+      <div class="about-grid">
+        <!-- Content Column -->
+        <div class="about-content-col reveal-on-scroll">
+          <p class="about-lead">
+            I am a third-year Computer Science &amp; Engineering student at Menoufia University (Faculty of Electronic
+            Engineering), driven by a deep interest in Machine Learning and analytical problem solving.
+          </p>
+
+          <p class="about-text">
+            My current technical focus centers on Classical Machine Learning, statistical data preprocessing,
+            exploratory data analysis (EDA), and applying classical algorithms to real-world predictive tasks. I place
+            high value on mathematical rigor, data integrity, and clean software architecture.
+          </p>
+
+          <p class="about-text">
+            Backed by a solid Computer Science foundation spanning data structures, algorithms, and object-oriented
+            programming, I continuously hone my analytical skills through competitive programming. As I strengthen my
+            core classical ML skills, my future direction is structured toward Deep Learning architectures and AI
+            Engineering.
+          </p>
+
+          <!-- Core Highlights Grid -->
+          <div class="about-highlights">
+            <div class="highlight-box">
+              <div class="highlight-icon">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+              </div>
+              <h4>CS Foundation</h4>
+              <p>Algorithms, data structures, and object-oriented software development.</p>
+            </div>
+
+            <div class="highlight-box">
+              <div class="highlight-icon">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <h4>Classical ML</h4>
+              <p>Regression, classification, ensemble models, and feature pipelines.</p>
+            </div>
+          </div>
+
+          <!-- Compact Education Card -->
+          <div class="education-card">
+            <div class="edu-info">
+              <h4>B.Sc. in Computer Science &amp; Engineering — In Progress</h4>
+              <p>Menoufia University — Faculty of Electronic Engineering</p>
+            </div>
+            <div class="edu-meta">
+              <span class="edu-gpa-badge">GPA: 3.38</span>
+              <span class="edu-years">2023 – 2028</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       4. Skills Section
+       ========================================================================= -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-title-wrap reveal-on-scroll">
+        <span class="section-badge">Capabilities</span>
+        <h2 class="section-title">Technical Skills</h2>
+        <p class="section-desc">Grounded in Computer Science theory and practical implementation across classical
+          Machine Learning, algorithms, and development tools.</p>
+      </div>
+
+      <div class="skills-grid">
+
+        <!-- Category 1: Programming -->
+        <div class="skill-category-card reveal-on-scroll">
+          <div class="skill-card-header">
+            <div class="skill-header-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+              </svg>
+            </div>
+            <h3 class="skill-card-title">Programming</h3>
+          </div>
+          <div class="skill-badge-container">
+            <span class="skill-badge">C++</span>
+            <span class="skill-badge">Python</span>
+            <span class="skill-badge">SQL</span>
+            <span class="skill-badge">Java</span>
+          </div>
+        </div>
+
+        <!-- Category 2: Machine Learning -->
+        <div class="skill-category-card reveal-on-scroll">
+          <div class="skill-card-header">
+            <div class="skill-header-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              </svg>
+            </div>
+            <h3 class="skill-card-title">Machine Learning</h3>
+          </div>
+          <div class="skill-badge-container">
+            <span class="skill-badge">Data Cleaning</span>
+            <span class="skill-badge">EDA</span>
+            <span class="skill-badge">Feature Engineering</span>
+            <span class="skill-badge">Feature Selection</span>
+            <span class="skill-badge">Categorical Encoding</span>
+            <span class="skill-badge">Missing Value Handling</span>
+            <span class="skill-badge">Outlier Handling</span>
+            <span class="skill-badge">Scaling</span>
+            <span class="skill-badge">Normalization</span>
+            <span class="skill-badge">Regression</span>
+            <span class="skill-badge">Classification</span>
+            <span class="skill-badge">Model Evaluation</span>
+            <span class="skill-badge">Hyperparameter Tuning</span>
+            <span class="skill-badge">Cross Validation</span>
+            <span class="skill-badge">Random Forest</span>
+            <span class="skill-badge">Decision Tree</span>
+            <span class="skill-badge">Logistic Regression</span>
+            <span class="skill-badge">Linear Regression</span>
+            <span class="skill-badge">Naive Bayes</span>
+          </div>
+        </div>
+
+        <!-- Category 3: Computer Science -->
+        <div class="skill-category-card reveal-on-scroll">
+          <div class="skill-card-header">
+            <div class="skill-header-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+              </svg>
+            </div>
+            <h3 class="skill-card-title">Computer Science</h3>
+          </div>
+          <div class="skill-badge-container">
+            <span class="skill-badge">Data Structures</span>
+            <span class="skill-badge">Algorithms</span>
+            <span class="skill-badge">Problem Solving</span>
+            <span class="skill-badge">Object-Oriented Programming</span>
+            <span class="skill-badge">Databases</span>
+            <span class="skill-badge">Operating Systems</span>
+            <span class="skill-badge">Computer Networks</span>
+          </div>
+        </div>
+
+        <!-- Category 4: Python Libraries -->
+        <div class="skill-category-card reveal-on-scroll">
+          <div class="skill-card-header">
+            <div class="skill-header-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="skill-card-title">Python Libraries</h3>
+          </div>
+          <div class="skill-badge-container">
+            <span class="skill-badge">NumPy</span>
+            <span class="skill-badge">Pandas</span>
+            <span class="skill-badge">Matplotlib</span>
+            <span class="skill-badge">Seaborn</span>
+            <span class="skill-badge">Scikit-learn</span>
+          </div>
+        </div>
+
+        <!-- Category 5: Tools -->
+        <div class="skill-category-card reveal-on-scroll">
+          <div class="skill-card-header">
+            <div class="skill-header-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3 class="skill-card-title">Tools &amp; Environments</h3>
+          </div>
+          <div class="skill-badge-container">
+            <span class="skill-badge">GitHub</span>
+            <span class="skill-badge">Kaggle</span>
+            <span class="skill-badge">Google Colab</span>
+            <span class="skill-badge">VS Code</span>
+            <span class="skill-badge">Jupyter Notebook</span>
+            <span class="skill-badge">Linux</span>
+          </div>
+        </div>
+
+        <!-- Future Direction Card -->
+        <div class="future-direction-card reveal-on-scroll">
+          <div class="future-direction-info">
+            <div class="future-direction-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="future-direction-title">Next Direction: Deep Learning &amp; AI Engineering</h3>
+              <p class="future-direction-desc">Currently deepening classical machine learning mastery while preparing to
+                branch into neural architectures and scalable AI systems.</p>
+            </div>
+          </div>
+          <div class="future-tags">
+            <span class="future-pill">Neural Networks</span>
+            <span class="future-pill">PyTorch</span>
+            <span class="future-pill">Deep Learning</span>
+            <span class="future-pill">AI Engineering</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5. Projects Section
+       ========================================================================= -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-title-wrap reveal-on-scroll">
+        <span class="section-badge">Work</span>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-desc">Practical software and Machine Learning implementations highlighting data preparation,
+          algorithms, and object-oriented architecture.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1: Car Price Prediction (Featured ML Project) -->
+        <article class="project-card featured-project reveal-on-scroll" id="project-car-price">
+          <div class="project-top-bar">
+            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+              <span class="project-badge featured-tag">Featured ML Project</span>
+              <span class="project-badge">Regression</span>
+              <span class="project-badge">Individual</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/mohamedkaboshrief/car-price-prediction" target="_blank"
+                rel="noopener noreferrer" class="project-icon-link" aria-label="Car Price Prediction GitHub Repository"
+                title="View GitHub Repo">
+                <svg fill="currentColor" viewBox="0 0 24 24">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                </svg>
+              </a>
+              <a href="https://www.kaggle.com/datasets/deepcontractor/car-price-prediction-challenge/data"
+                target="_blank" rel="noopener noreferrer" class="project-icon-link"
+                aria-label="Car Price Prediction Kaggle Dataset" title="View Kaggle Dataset">
+                <svg fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.186c0 .211-.105.336-.316.336H5.297c-.211 0-.316-.125-.316-.336V.336C4.981.125 5.086 0 5.297 0h2.674c.211 0 .316.125.316.336v14.717l6.326-6.495c.141-.164.305-.246.492-.246h3.28c.164 0 .258.047.281.141.023.117-.023.211-.141.281l-6.795 6.772 7.006 7.973c.117.07.164.164.141.281z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <h3 class="project-title">Car Price Prediction</h3>
+          <p class="project-desc">
+            An end-to-end Classical Machine Learning project developed to predict used-car market valuations. Features a
+            comprehensive data cleaning pipeline, rigorous outlier detection, target encoding for high-cardinality
+            vehicle models, and an empirical comparison across 8 regression algorithms.
+          </p>
+
+          <!-- Verified Key Test Results Grid -->
+          <div class="metrics-grid">
+            <div class="metric-item">
+              <span class="metric-value">0.6979</span>
+              <span class="metric-label">Test R² Score</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-value">5,584.31</span>
+              <span class="metric-label">Mean Absolute Error</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-value">3,409.62</span>
+              <span class="metric-label">Median Absolute Error</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-value">9.80 &times; 10⁷</span>
+              <span class="metric-label">Mean Squared Error</span>
+            </div>
+          </div>
+
+          <!-- Highlighted Technical Details -->
+          <div class="project-details-list">
+            <div class="detail-item">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span><strong>Data Preprocessing:</strong> Handled missing values, removed duplicate rows, capped
+                statistical outliers, and performed exploratory data analysis (EDA).</span>
+            </div>
+            <div class="detail-item">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span><strong>Feature Engineering:</strong> Implemented Target Encoding on high-cardinality "Car"
+                categories alongside feature scaling and normalization.</span>
+            </div>
+            <div class="detail-item">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span><strong>Final Winning Model:</strong>
+                <code>RandomForestRegressor(n_estimators=500, max_depth=10, random_state=33)</code></span>
+            </div>
+          </div>
+
+          <!-- Tech Stack Tags -->
+          <div class="project-tech-tags">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Scikit-learn</span>
+            <span class="tech-tag">Pandas</span>
+            <span class="tech-tag">NumPy</span>
+            <span class="tech-tag">Random Forest</span>
+            <span class="tech-tag">Target Encoding</span>
+            <span class="tech-tag">EDA</span>
+          </div>
+
+          <div class="project-card-footer">
+            <button type="button" class="modal-trigger-btn" id="open-car-modal-btn">
+              <span>View Model Pipeline &amp; Comparison</span>
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+            <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+              <a href="https://github.com/mohamedkaboshrief/car-price-prediction" target="_blank"
+                rel="noopener noreferrer" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.88rem;">
+                <span>GitHub Repo</span>
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+              <a href="https://www.kaggle.com/datasets/deepcontractor/car-price-prediction-challenge/data" target="_blank"
+                rel="noopener noreferrer" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.88rem;">
+                <span>Kaggle Dataset</span>
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: Tic Tac Toe Game -->
+        <article class="project-card standard-project reveal-on-scroll">
+          <div class="project-top-bar">
+            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+              <span class="project-badge">OOP</span>
+              <span class="project-badge">Individual</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/mohamedkaboshrief/TIC_TAC_TOE_Game" target="_blank" rel="noopener noreferrer"
+                class="project-icon-link" aria-label="Tic Tac Toe Game GitHub Repository" title="View GitHub Repo">
+                <svg fill="currentColor" viewBox="0 0 24 24">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <h3 class="project-title">Tic Tac Toe Game</h3>
+          <p class="project-desc">
+            A terminal-based two-player Tic Tac Toe game engineered using Object-Oriented Programming (OOP) principles
+            in Python. Emphasizes clean class structure, state encapsulation, and robust game logic.
+          </p>
+
+          <div class="project-details-list">
+            <div class="detail-item">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span><strong>Key Classes:</strong> <code>Player</code>, <code>Menu</code>, <code>Board</code>,
+                <code>Game</code></span>
+            </div>
+            <div class="detail-item">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span><strong>Features:</strong> Name/symbol selection, input validation, win/draw detection, and replay
+                loop.</span>
+            </div>
+          </div>
+
+          <div class="project-tech-tags">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Object-Oriented Programming</span>
+            <span class="tech-tag">CLI Interface</span>
+            <span class="tech-tag">Input Validation</span>
+          </div>
+
+          <div class="project-card-footer">
+            <a href="https://github.com/mohamedkaboshrief/TIC_TAC_TOE_Game" target="_blank" rel="noopener noreferrer"
+              class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.88rem;">
+              <span>View GitHub Repository</span>
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 3: Pet Hotel Management System -->
+        <article class="project-card standard-project reveal-on-scroll">
+          <div class="project-top-bar">
+            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+              <span class="project-badge">Database Design</span>
+              <span class="project-badge">University Project</span>
+            </div>
+          </div>
+
+          <h3 class="project-title">Pet Hotel Management System</h3>
+          <p class="project-desc">
+            A structured relational database engineering project focused on designing, normalizing, and implementing an
+            administrative database system for a full-service pet boarding and care facility.
+          </p>
+
+          <div class="project-details-list">
+            <div class="detail-item">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span><strong>Data Modeling:</strong> Complete Entity-Relationship Diagrams (ERD) and relational schema
+                design.</span>
+            </div>
+            <div class="detail-item">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span><strong>Integrity &amp; Queries:</strong> Primary/Foreign keys, 3NF normalization, and complex
+                transactional SQL queries.</span>
+            </div>
+          </div>
+
+          <div class="project-tech-tags">
+            <span class="tech-tag">SQL Server</span>
+            <span class="tech-tag">SSMS</span>
+            <span class="tech-tag">Relational Database</span>
+            <span class="tech-tag">ERD</span>
+            <span class="tech-tag">Normalization</span>
+            <span class="tech-tag">SQL Queries</span>
+          </div>
+
+          <div class="project-card-footer">
+            <span style="font-size: 0.85rem; color: var(--text-muted);">University Academic Project (Relational Database
+              Design)</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       6. Competitive Programming Section
+       ========================================================================= -->
+  <section class="section" id="competitive">
+    <div class="container">
+      <div class="section-title-wrap reveal-on-scroll">
+        <span class="section-badge">Problem Solving</span>
+        <h2 class="section-title">Competitive Programming</h2>
+        <p class="section-desc">Regular algorithmic problem-solving practice demonstrating data structure mastery, time
+          complexity optimization, and contest teamwork.</p>
+      </div>
+
+      <div class="competitive-grid">
+
+        <!-- Codeforces Card -->
+        <div class="competitive-card reveal-on-scroll">
+          <div class="comp-header">
+            <div class="comp-title-wrap">
+              <div class="comp-icon">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="comp-title">Codeforces</h3>
+                <span class="comp-subtitle">Handle: mohamed_aboshrief</span>
+              </div>
+            </div>
+            <a href="https://codeforces.com/profile/mohamed_aboshrief" target="_blank" rel="noopener noreferrer"
+              class="btn btn-outline" style="padding: 0.45rem 0.85rem; font-size: 0.82rem;">
+              <span>Profile</span>
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </div>
+
+          <div class="cf-stats-grid">
+            <div class="cf-stat-box">
+              <span class="cf-number">807</span>
+              <span class="cf-label">Current Rating</span>
+            </div>
+            <div class="cf-stat-box">
+              <span class="cf-number">893</span>
+              <span class="cf-label">Maximum Rating</span>
+            </div>
+            <div class="cf-stat-box">
+              <span class="cf-number">10</span>
+              <span class="cf-label">Rated Contests</span>
+            </div>
+            <div class="cf-stat-box">
+              <span class="cf-number">110+</span>
+              <span class="cf-label">Problems Solved</span>
+            </div>
+          </div>
+
+          <p style="font-size: 0.9rem; color: var(--text-secondary);">
+            Actively practicing algorithm implementation in C++, focusing on dynamic programming, graphs, greedy
+            methods, and number theory.
+          </p>
+        </div>
+
+        <!-- ECPC Qualifications Card -->
+        <div class="competitive-card reveal-on-scroll">
+          <div class="comp-header">
+            <div class="comp-title-wrap">
+              <div class="comp-icon">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="comp-title">ECPC Qualifications 2026</h3>
+                <span class="comp-subtitle">Egyptian Collegiate Programming Contest</span>
+              </div>
+            </div>
+            <span class="project-badge">Team Member</span>
+          </div>
+
+          <div class="ecpc-results-list">
+            <div class="ecpc-item">
+              <div class="ecpc-rank-badge">16th / 40</div>
+              <div class="ecpc-item-text">
+                <h4>Menoufia University Ranking</h4>
+                <p>Placed 16th among 40 participating engineering teams at Menoufia University.</p>
+              </div>
+            </div>
+
+            <div class="ecpc-item">
+              <div class="ecpc-rank-badge">32nd / 170</div>
+              <div class="ecpc-item-text">
+                <h4>Competition Day Standings</h4>
+                <p>Placed 32nd among 170 competing teams on official competition day.</p>
+              </div>
+            </div>
+          </div>
+
+          <p style="font-size: 0.9rem; color: var(--text-secondary);">
+            Participated as a team member, collaborating on live algorithmic problem solving under strict contest time
+            limits.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       7. Experience & Training Section (Vertical Timeline)
+       ========================================================================= -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-title-wrap reveal-on-scroll">
+        <span class="section-badge">Timeline</span>
+        <h2 class="section-title">Experience &amp; Training</h2>
+        <p class="section-desc">Structured professional training programs, technical scholarships, and competitive
+          programming participation.</p>
+      </div>
+
+      <div class="timeline">
+
+        <!-- Timeline Item 1: DEPI -->
+        <div class="timeline-item reveal-on-scroll">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">DEPI — Microsoft Machine Learning</h3>
+                <div class="timeline-org">Digital Egypt Pioneers Initiative &bull; Ministry of Communications and
+                  Information Technology (MCIT)</div>
+              </div>
+              <span class="timeline-type-badge internship">Internship</span>
+            </div>
+            <div class="timeline-period">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <span>July 2026 – January 2027</span>
+            </div>
+            <p class="timeline-desc">
+              Comprehensive Machine Learning track covering core theoretical foundations, practical implementations, and
+              career readiness.
+            </p>
+            <div class="timeline-topics-wrap">
+              <span class="topic-tag">Python</span>
+              <span class="topic-tag">Statistics</span>
+              <span class="topic-tag">NumPy</span>
+              <span class="topic-tag">Pandas</span>
+              <span class="topic-tag">Data Preprocessing</span>
+              <span class="topic-tag">Machine Learning Algorithms</span>
+              <span class="topic-tag">Soft Skills</span>
+              <span class="topic-tag">Freelancing</span>
+              <span class="topic-tag">Career Coaching</span>
+              <span class="topic-tag">Graduation Project</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 2: ITI -->
+        <div class="timeline-item reveal-on-scroll">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">ITI — AI &amp; Machine Learning</h3>
+                <div class="timeline-org">Information Technology Institute (ITI)</div>
+              </div>
+              <span class="timeline-type-badge">Scholarship</span>
+            </div>
+            <div class="timeline-period">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <span>August 2025 – September 2025</span>
+            </div>
+            <p class="timeline-desc">
+              Completed a 72-hour intensive scholarship training program focused on artificial intelligence core
+              principles, machine learning workflows, and hands-on laboratory exercises.
+            </p>
+            <div class="timeline-topics-wrap">
+              <span class="topic-tag">Artificial Intelligence</span>
+              <span class="topic-tag">Machine Learning</span>
+              <span class="topic-tag">72 Hours Intensive</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 3: Sprints -->
+        <div class="timeline-item reveal-on-scroll">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Sprints — AI &amp; Machine Learning</h3>
+                <div class="timeline-org">Sprints Online Training</div>
+              </div>
+              <span class="timeline-type-badge">Online Course</span>
+            </div>
+            <div class="timeline-period">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <span>August 2025 – September 2025</span>
+            </div>
+            <p class="timeline-desc">
+              Completed approximately 40–60 hours of technical coursework focusing on AI and Machine Learning
+              fundamentals, practical algorithms, and code exercises.
+            </p>
+            <div class="timeline-topics-wrap">
+              <span class="topic-tag">Machine Learning</span>
+              <span class="topic-tag">Applied AI</span>
+              <span class="topic-tag">40–60 Hours</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       8. Technical Focus Section ("What I Work With")
+       ========================================================================= -->
+  <section class="section" id="focus">
+    <div class="container">
+      <div class="section-title-wrap reveal-on-scroll">
+        <span class="section-badge">Competencies</span>
+        <h2 class="section-title">What I Work With</h2>
+        <p class="section-desc">Key technical focus areas and methodologies I apply across software and Machine Learning
+          projects.</p>
+      </div>
+
+      <div class="focus-grid">
+
+        <div class="focus-card reveal-on-scroll">
+          <div class="focus-icon-wrap">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+          </div>
+          <h3 class="focus-title">Classical Machine Learning</h3>
+          <p class="focus-desc">Applying regression, classification, and ensemble methods such as Random Forests,
+            Decision Trees, and linear models with methodical metric evaluation.</p>
+        </div>
+
+        <div class="focus-card reveal-on-scroll">
+          <div class="focus-icon-wrap">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+            </svg>
+          </div>
+          <h3 class="focus-title">Data Preprocessing &amp; Analysis</h3>
+          <p class="focus-desc">Handling missing values, outlier detection, scaling, categorical target encoding, and
+            detailed exploratory data analysis using Pandas and Seaborn.</p>
+        </div>
+
+        <div class="focus-card reveal-on-scroll">
+          <div class="focus-icon-wrap">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+            </svg>
+          </div>
+          <h3 class="focus-title">Python Development</h3>
+          <p class="focus-desc">Writing clean, maintainable Python code utilizing Object-Oriented Programming (OOP)
+            paradigms, structured modularity, and standard packages.</p>
+        </div>
+
+        <div class="focus-card reveal-on-scroll">
+          <div class="focus-icon-wrap">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+            </svg>
+          </div>
+          <h3 class="focus-title">Machine Learning Projects</h3>
+          <p class="focus-desc">Building structured ML pipelines from raw dataset ingestion through feature
+            transformation, model selection, hyperparameter tuning, and cross-validation.</p>
+        </div>
+
+        <div class="focus-card reveal-on-scroll">
+          <div class="focus-icon-wrap">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+            </svg>
+          </div>
+          <h3 class="focus-title">Problem Solving</h3>
+          <p class="focus-desc">Practicing competitive algorithmic challenges with focus on algorithmic complexity,
+            optimal space-time trade-offs, and rigorous edge-case handling.</p>
+        </div>
+
+        <div class="focus-card reveal-on-scroll">
+          <div class="focus-icon-wrap">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+            </svg>
+          </div>
+          <h3 class="focus-title">Database Projects</h3>
+          <p class="focus-desc">Designing relational schemas, entity-relationship diagrams (ERD), 3NF normalization, and
+            writing structured SQL queries using SSMS.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       9. Career Objective Section
+       ========================================================================= -->
+  <section class="section" id="objective">
+    <div class="container">
+      <div class="objective-banner reveal-on-scroll">
+        <div class="objective-content">
+          <span class="objective-badge">Direction &amp; Aspirations</span>
+          <p class="objective-quote">
+            &ldquo;My goal is to build a high-impact career as a Machine Learning Engineer, grounded in a rigorous
+            Computer Science foundation, disciplined problem solving, and practical technical execution.&rdquo;
+          </p>
+          <p class="objective-subtext">
+            I am currently dedicated to mastering Classical Machine Learning algorithms, statistical evaluation, and
+            data preprocessing pipelines. As I continue my engineering studies, my long-term trajectory expands toward
+            Deep Learning, neural architectures, and AI Engineering to build reliable software solutions that deliver
+            genuine real-world value.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       10. Contact Section
+       ========================================================================= -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-title-wrap reveal-on-scroll">
+        <span class="section-badge">Get In Touch</span>
+        <h2 class="section-title">Contact Information</h2>
+        <p class="section-desc">Feel free to reach out for machine learning discussions, software development projects,
+          or competitive programming collaboration.</p>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- Left: Contact Information & Profiles -->
+        <div class="contact-info-col reveal-on-scroll">
+          <div class="contact-info-card">
+            <h3>Direct Contact</h3>
+            <p>I am always open to discussing academic research, software projects, and Machine Learning concepts.</p>
+
+            <div class="contact-methods">
+
+              <!-- Email -->
+              <div class="contact-method-item">
+                <div class="contact-method-main">
+                  <div class="contact-method-icon">
+                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <div class="contact-method-text">
+                    <span class="contact-method-label">Email Address</span>
+                    <a href="mailto:mohamedkabosherif667@gmail.com" class="contact-method-value"
+                      title="Send email to Mohamed">mohamedkabosherif667@gmail.com</a>
+                  </div>
+                </div>
+                <button type="button" class="copy-btn" data-copy="mohamedkabosherif667@gmail.com"
+                  aria-label="Copy email address" title="Copy email">
+                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Phone -->
+              <div class="contact-method-item">
+                <div class="contact-method-main">
+                  <div class="contact-method-icon">
+                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                  </div>
+                  <div class="contact-method-text">
+                    <span class="contact-method-label">Phone Number</span>
+                    <a href="tel:+201067701567" class="contact-method-value" title="Call Mohamed">+20 106 770 1567</a>
+                  </div>
+                </div>
+                <button type="button" class="copy-btn" data-copy="+201067701567" aria-label="Copy phone number"
+                  title="Copy phone number">
+                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Location -->
+              <div class="contact-method-item">
+                <div class="contact-method-main">
+                  <div class="contact-method-icon">
+                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                  <div class="contact-method-text">
+                    <span class="contact-method-label">Location</span>
+                    <span class="contact-method-value">Menoufia, Egypt</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Professional Profiles Links Card -->
+          <div class="profiles-card">
+            <h4>Verified Profiles</h4>
+            <div class="profiles-buttons-group">
+              <a href="https://github.com/mohamedkaboshrief" target="_blank" rel="noopener noreferrer"
+                class="profile-pill-link">
+                <svg fill="currentColor" viewBox="0 0 24 24">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                </svg>
+                <span>GitHub</span>
+              </a>
+              <a href="https://www.linkedin.com/in/mohamed-aboshrief-5a19b1309" target="_blank" rel="noopener noreferrer"
+                class="profile-pill-link">
+                <svg fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://codeforces.com/profile/mohamed_aboshrief" target="_blank" rel="noopener noreferrer"
+                class="profile-pill-link">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+                <span>Codeforces</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: HTML-only Contact Form -->
+        <div class="contact-form-card reveal-on-scroll">
+          <h3>Send a Message</h3>
+          <p>Fill in your details and I'll get back to you as soon as possible.</p>
+
+          <form id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="contact-name" class="form-label">Your Name</label>
+              <input type="text" id="contact-name" name="name" class="form-control" placeholder="e.g. Alex Smith"
+                required>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-email" class="form-label">Email Address</label>
+              <input type="email" id="contact-email" name="email" class="form-control"
+                placeholder="e.g. alex@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message" class="form-label">Message</label>
+              <textarea id="contact-message" name="message" class="form-control" rows="5"
+                placeholder="Write your message here..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">
+              <span>Send Message</span>
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       11. Footer
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>Mohamed Khaled Aboshrief</h3>
+          <p>Computer Science &amp; Engineering Student | Machine Learning</p>
+        </div>
+
+        <div class="footer-social-links">
+          <a href="https://github.com/mohamedkaboshrief" target="_blank" rel="noopener noreferrer"
+            class="footer-social-link">
+            <svg fill="currentColor" viewBox="0 0 24 24">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+            </svg>
+            <span>GitHub</span>
+          </a>
+          <a href="https://www.linkedin.com/in/mohamed-aboshrief-5a19b1309" target="_blank" rel="noopener noreferrer"
+            class="footer-social-link">
+            <svg fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+            </svg>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://codeforces.com/profile/mohamed_aboshrief" target="_blank" rel="noopener noreferrer"
+            class="footer-social-link">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+            </svg>
+            <span>Codeforces</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2026 Mohamed Khaled Aboshrief. Built with semantic HTML, modern CSS, and
+          vanilla JavaScript.</p>
+        <a href="#hero" class="back-to-top-btn" aria-label="Back to top of page">
+          <span>Back to Top</span>
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       Modal Dialog: Car Price Prediction Technical Details (<dialog>)
+       ========================================================================= -->
+  <dialog id="car-project-modal" closedby="any" aria-labelledby="modal-car-title">
+    <div class="modal-dialog-body">
+      <div class="modal-header">
+        <h3 id="modal-car-title">Car Price Prediction — Technical Breakdown</h3>
+        <button type="button" class="modal-close-btn" id="close-car-modal-btn" aria-label="Close dialog">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal-scrollable-content">
+        <!-- Section 1: Overview -->
+        <div class="modal-section-block">
+          <h4>Dataset &amp; Problem Framing</h4>
+          <p>
+            Trained on the Kaggle Car Price Prediction Challenge dataset. The goal is to accurately forecast pre-owned
+            automobile transaction prices using multi-dimensional technical attributes including manufacturer, model,
+            year, mileage, engine volume, gearbox, and drive wheels.
+          </p>
+        </div>
+
+        <!-- Section 2: Pipeline Steps -->
+        <div class="modal-section-block">
+          <h4>Data Cleaning &amp; Feature Engineering Pipeline</h4>
+          <ul
+            style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.92rem; color: var(--text-secondary); margin-left: 1.25rem; list-style: disc;">
+            <li><strong>Missing-Value Imputation:</strong> Systematic analysis of missing attributes; median/mode
+              imputation based on vehicle segment distributions.</li>
+            <li><strong>Duplicate &amp; Outlier Handling:</strong> Detected and removed duplicated rows; bounded extreme
+              target values using interquartile range (IQR) thresholds.</li>
+            <li><strong>High-Cardinality Target Encoding:</strong> Evaluated the "Car" manufacturer/model feature
+              (hundreds of distinct categories). Applied Target Encoding with smoothing to prevent data leakage and
+              dimensionality explosion compared to standard One-Hot Encoding.</li>
+            <li><strong>Feature Scaling:</strong> Applied normalization/standardization to numeric features across all
+              baseline distance-based and linear models.</li>
+          </ul>
+        </div>
+
+        <!-- Section 3: Models Tested Comparison Table -->
+        <div class="modal-section-block">
+          <h4>Algorithm Comparison (8 Models Tested)</h4>
+          <div class="table-responsive">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Model Algorithm</th>
+                  <th>Category</th>
+                  <th>Status / Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Linear Regression</td>
+                  <td>Linear Baseline</td>
+                  <td>Baseline comparison; underfitted complex interactions</td>
+                </tr>
+                <tr>
+                  <td>Lasso Regression (L1)</td>
+                  <td>Regularized Linear</td>
+                  <td>Performed feature sparsity testing</td>
+                </tr>
+                <tr>
+                  <td>Ridge Regression (L2)</td>
+                  <td>Regularized Linear</td>
+                  <td>Reduced multicollinearity among correlated specs</td>
+                </tr>
+                <tr>
+                  <td>K-Nearest Neighbors (KNN)</td>
+                  <td>Instance-based</td>
+                  <td>High inference latency on large feature space</td>
+                </tr>
+                <tr>
+                  <td>Support Vector Regressor (SVR)</td>
+                  <td>Kernel Method</td>
+                  <td>Sensitive to high variance in vehicle price scale</td>
+                </tr>
+                <tr>
+                  <td>Decision Tree Regressor</td>
+                  <td>Tree-based</td>
+                  <td>Prone to overfitting on training split</td>
+                </tr>
+                <tr>
+                  <td>Gradient Boosting Regressor</td>
+                  <td>Ensemble Boosting</td>
+                  <td>Strong predictive power across dense clusters</td>
+                </tr>
+                <tr class="winner-row">
+                  <td><strong>Random Forest Regressor</strong> &starf;</td>
+                  <td>Ensemble Bagging</td>
+                  <td><strong>Selected Best Model</strong> &mdash; Optimal bias-variance balance</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Section 4: Final Model Configuration & Metrics -->
+        <div class="modal-section-block">
+          <h4>Winning Model Configuration</h4>
+          <div class="code-snippet-box">
+            RandomForestRegressor( n_estimators=500, max_depth=10, random_state=33 )
+          </div>
+        </div>
+
+        <div class="modal-section-block">
+          <h4>Verified Test Evaluation Results</h4>
+          <div class="metrics-grid">
+            <div class="metric-item">
+              <span class="metric-value">0.6979</span>
+              <span class="metric-label">Test R² Score</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-value">5,584.31</span>
+              <span class="metric-label">MAE</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-value">3,409.62</span>
+              <span class="metric-label">Median Absolute Error</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-value">98,022,220.97</span>
+              <span class="metric-label">MSE</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.5rem;">
+          <a href="https://github.com/mohamedkaboshrief/car-price-prediction" target="_blank" rel="noopener noreferrer"
+            class="btn btn-primary" style="padding: 0.6rem 1.2rem; font-size: 0.9rem;">
+            <span>GitHub Repository</span>
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+            </svg>
+          </a>
+          <a href="https://www.kaggle.com/datasets/deepcontractor/car-price-prediction-challenge/data" target="_blank"
+            rel="noopener noreferrer" class="btn btn-outline" style="padding: 0.6rem 1.2rem; font-size: 0.9rem;">
+            <span>Kaggle Dataset</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- =========================================================================
+       Toast Notification Component
+       ========================================================================= -->
+  <div class="toast-notification" id="toast" role="status" aria-live="polite">
+    <div class="toast-icon">
+      <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+      </svg>
+    </div>
+    <span id="toast-message">Message copied to clipboard!</span>
+  </div>
+
+  <!-- External JavaScript Logic -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>
