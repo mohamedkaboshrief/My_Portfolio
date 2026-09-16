@@ -318,4 +318,59 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  /* ==========================================================================
+     10. Expandable Skills ("View More / View Less")
+     ========================================================================== */
+  const skillToggleBtns = document.querySelectorAll('.skill-toggle-btn');
+
+  skillToggleBtns.forEach((btn) => {
+    const targetId = btn.getAttribute('aria-controls');
+    if (!targetId) return;
+    const targetContainer = document.getElementById(targetId);
+    if (!targetContainer) return;
+
+    const toggleText = btn.querySelector('.skill-toggle-text');
+    const togglePill = btn.querySelector('.skill-toggle-pill');
+
+    const expandSkills = () => {
+      targetContainer.removeAttribute('hidden');
+      targetContainer.classList.add('is-expanded');
+      targetContainer.setAttribute('aria-hidden', 'false');
+      btn.classList.add('is-expanded');
+      btn.setAttribute('aria-expanded', 'true');
+      if (toggleText) toggleText.textContent = 'View Less';
+      if (togglePill) togglePill.style.display = 'none';
+    };
+
+    const collapseSkills = () => {
+      targetContainer.classList.remove('is-expanded');
+      targetContainer.setAttribute('aria-hidden', 'true');
+      btn.classList.remove('is-expanded');
+      btn.setAttribute('aria-expanded', 'false');
+      if (toggleText) toggleText.textContent = 'View More';
+      if (togglePill) togglePill.style.display = '';
+
+      // Set hidden="until-found" after transition completes to preserve smooth animation
+      setTimeout(() => {
+        if (!targetContainer.classList.contains('is-expanded')) {
+          targetContainer.setAttribute('hidden', 'until-found');
+        }
+      }, 300);
+    };
+
+    btn.addEventListener('click', () => {
+      const isExpanded = btn.classList.contains('is-expanded');
+      if (isExpanded) {
+        collapseSkills();
+      } else {
+        expandSkills();
+      }
+    });
+
+    // Native "Find in page" (Ctrl+F) compatibility via 'beforematch'
+    targetContainer.addEventListener('beforematch', () => {
+      expandSkills();
+    });
+  });
+
 });
