@@ -141,40 +141,42 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ==========================================================================
-     6. Modal Dialog Handling (Car Price Prediction Project)
+     6. Modal Dialog Handling (Car Price Prediction & Telco Churn Projects)
      ========================================================================== */
-  const carModal = document.getElementById('car-project-modal');
-  const openCarModalBtn = document.getElementById('open-car-modal-btn');
-  const closeCarModalBtn = document.getElementById('close-car-modal-btn');
+  function setupProjectModal(modalId, openBtnId, closeBtnId) {
+    const modal = document.getElementById(modalId);
+    const openBtn = document.getElementById(openBtnId);
+    const closeBtn = document.getElementById(closeBtnId);
 
-  if (carModal && openCarModalBtn) {
-    openCarModalBtn.addEventListener('click', () => {
-      if (typeof carModal.showModal === 'function') {
-        carModal.showModal();
-        document.body.style.overflow = 'hidden';
-      }
-    });
+    if (!modal || !openBtn) return;
 
     const closeModal = () => {
-      if (typeof carModal.close === 'function') {
-        carModal.close();
+      if (typeof modal.close === 'function') {
+        modal.close();
       }
       document.body.style.overflow = '';
     };
 
-    if (closeCarModalBtn) {
-      closeCarModalBtn.addEventListener('click', closeModal);
+    openBtn.addEventListener('click', () => {
+      if (typeof modal.showModal === 'function') {
+        modal.showModal();
+        document.body.style.overflow = 'hidden';
+      }
+    });
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', closeModal);
     }
 
-    carModal.addEventListener('close', () => {
+    modal.addEventListener('close', () => {
       document.body.style.overflow = '';
     });
 
     // Light-dismiss fallback for browsers without native closedby support
     if (!('closedBy' in HTMLDialogElement.prototype)) {
-      carModal.addEventListener('click', (event) => {
-        if (event.target !== carModal) return;
-        const rect = carModal.getBoundingClientRect();
+      modal.addEventListener('click', (event) => {
+        if (event.target !== modal) return;
+        const rect = modal.getBoundingClientRect();
         const isInside = (
           rect.top <= event.clientY &&
           event.clientY <= rect.top + rect.height &&
@@ -187,6 +189,9 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   }
+
+  setupProjectModal('car-project-modal', 'open-car-modal-btn', 'close-car-modal-btn');
+  setupProjectModal('churn-project-modal', 'open-churn-modal-btn', 'close-churn-modal-btn');
 
   /* ==========================================================================
      7. Toast Notification Utility
