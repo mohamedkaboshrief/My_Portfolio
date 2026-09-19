@@ -504,26 +504,26 @@
           <h3 class="project-title">Car Price Prediction</h3>
           <p class="project-desc">
             An end-to-end Machine Learning regression project predicting used-car valuations based on multi-attribute vehicle
-            characteristics. Incorporates automated data preprocessing, extreme outlier removal, Target Encoding for high-cardinality
-            features, 5-fold cross-validation across 8 regressors, and GridSearchCV hyperparameter tuning.
+            characteristics. Incorporates automated data preprocessing, Target Encoding for high-cardinality features, 5-fold cross-validation
+            across 9 regressors, and GridSearchCV hyperparameter tuning.
           </p>
 
           <!-- Verified Key Test Results Grid -->
           <div class="metrics-grid">
             <div class="metric-item">
-              <span class="metric-value">0.7523</span>
-              <span class="metric-label">Test R² (~75.2%)</span>
+              <span class="metric-value">0.7488</span>
+              <span class="metric-label">Test R² (~74.9%)</span>
             </div>
             <div class="metric-item">
-              <span class="metric-value">4,467.51</span>
+              <span class="metric-value">4,521.31</span>
               <span class="metric-label">Mean Absolute Error</span>
             </div>
             <div class="metric-item">
-              <span class="metric-value">2,440.52</span>
+              <span class="metric-value">2,462.27</span>
               <span class="metric-label">Median Absolute Error</span>
             </div>
             <div class="metric-item">
-              <span class="metric-value">8.04 &times; 10⁷</span>
+              <span class="metric-value">8.15 &times; 10⁷</span>
               <span class="metric-label">Mean Squared Error</span>
             </div>
           </div>
@@ -534,26 +534,26 @@
               <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
               </svg>
-              <span><strong>Data Preprocessing:</strong> Handled missing values, cleaned numerical features, merged manufacturer/model info, and eliminated extreme price outliers.</span>
+              <span><strong>Data Preprocessing:</strong> Handled missing values, converted numerical features, merged manufacturer/model info, analyzed 1,633 low-price records (&lt;500), and eliminated extreme price outliers (18,923 clean rows, 52 columns).</span>
             </div>
             <div class="detail-item">
               <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
               </svg>
-              <span><strong>Feature Engineering:</strong> Applied Target Encoding to the high-cardinality "Car" feature using Category Encoders to prevent dimensionality explosion.</span>
+              <span><strong>Feature Engineering:</strong> Applied Target Encoding to the high-cardinality "Car" feature using Category Encoders to retain brand/model lineage without dimensionality explosion.</span>
             </div>
             <div class="detail-item">
               <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
               </svg>
-              <span><strong>Model Selection &amp; Tuning:</strong> 5-Fold Cross-Validation across 8 regression models. Selected Random Forest (Mean CV R²: 0.7447) and tuned via GridSearchCV (24 parameter combinations).</span>
+              <span><strong>Model Comparison &amp; Selection:</strong> 5-Fold Cross-Validation across 9 regressors. Random Forest was selected as final model (CV R²: 0.7175, Test R²: 0.7488) over Gradient Boosting (CV R²: 0.7581) due to highest test score and lowest overfitting gap (0.145).</span>
             </div>
             <div class="detail-item">
               <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
               </svg>
               <span><strong>Tuned Winning Model:</strong>
-                <code>RandomForestRegressor(n_estimators=500, max_depth=15, min_samples_split=2, min_samples_leaf=1, max_features=0.8, random_state=33)</code></span>
+                <code>RandomForestRegressor(n_estimators=500, max_depth=15, min_samples_split=5, min_samples_leaf=2, max_features=0.7, random_state=33)</code> tuned via GridSearchCV (144 parameter combinations).</span>
             </div>
           </div>
 
@@ -563,6 +563,7 @@
             <span class="tech-tag">Scikit-learn</span>
             <span class="tech-tag">Pandas</span>
             <span class="tech-tag">NumPy</span>
+            <span class="tech-tag">XGBoost</span>
             <span class="tech-tag">Category Encoders</span>
             <span class="tech-tag">Random Forest</span>
             <span class="tech-tag">5-Fold CV</span>
@@ -627,27 +628,27 @@
 
           <h3 class="project-title">Telco Customer Churn Classification</h3>
           <p class="project-desc">
-            An end-to-end Machine Learning classification project designed to identify customers at risk of churn based on demographics,
-            account tenure, contract arrangements, and service subscriptions. Focuses on maximizing <strong>Churn Recall</strong> to enable
-            timely, high-impact customer retention interventions.
+            An end-to-end Machine Learning classification project focused on predicting customer churn using customer demographic, service,
+            contract, and billing information. Addresses extensive missing values, incorporates multi-type encoding and class weighting,
+            and benchmarks 7 classifiers via 5-fold cross-validation targeting maximum <strong>Churn Recall</strong>.
           </p>
 
           <!-- Verified Key Test Results Grid -->
           <div class="metrics-grid">
             <div class="metric-item">
-              <span class="metric-value">79%</span>
-              <span class="metric-label">Churn Recall (301/380)</span>
+              <span class="metric-value">84%</span>
+              <span class="metric-label">Churn Recall (320/380)</span>
             </div>
             <div class="metric-item">
-              <span class="metric-value">74.93%</span>
+              <span class="metric-value">74.08%</span>
               <span class="metric-label">Test Accuracy</span>
             </div>
             <div class="metric-item">
-              <span class="metric-value">63%</span>
+              <span class="metric-value">64%</span>
               <span class="metric-label">Churn F1-Score</span>
             </div>
             <div class="metric-item">
-              <span class="metric-value">52%</span>
+              <span class="metric-value">51%</span>
               <span class="metric-label">Churn Precision</span>
             </div>
           </div>
@@ -658,26 +659,26 @@
               <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
               </svg>
-              <span><strong>Data Preprocessing &amp; Cleaning:</strong> Resolved missing values in <code>TotalCharges</code>, estimated missing numeric specs, stripped uninformative identifiers (<code>customerID</code>), and analyzed outliers across 7,040 customer records.</span>
+              <span><strong>Data Preprocessing &amp; Imputation:</strong> Recovered thousands of missing values across 7 columns (tenure, MonthlyCharges, StreamingTV, Partner, InternetService, gender, TotalCharges) using mathematical relations and grouped medians, dropping only 3 unrecoverable records (7,040 rows).</span>
             </div>
             <div class="detail-item">
               <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
               </svg>
-              <span><strong>Multi-Type Feature Encoding:</strong> Leveraged Label Encoding for binary features, One-Hot Encoding for nominal features, and Ordinal Encoding for <code>Contract</code> (Month-to-month &rarr; 0, 1 yr &rarr; 1, 2 yr &rarr; 2) expanding to 30 features.</span>
+              <span><strong>Multi-Type Feature Encoding:</strong> Leveraged Label Encoding for binary features, One-Hot Encoding for nominal features (gender, Partner, Dependents, InternetService, PaymentMethod), and Ordinal Encoding for <code>Contract</code> (0, 1, 2) expanding to 29 features.</span>
             </div>
             <div class="detail-item">
               <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
               </svg>
-              <span><strong>Recall-Optimized 5-Fold CV:</strong> Evaluated 6 classification algorithms targeting maximum Recall to capture churners. Gaussian Naive Bayes outperformed all baselines with 0.723 CV Recall.</span>
+              <span><strong>Recall-Optimized 5-Fold CV:</strong> Evaluated 7 classification algorithms with <code>class_weight='balanced'</code> to handle ~27% churn imbalance. Linear models achieved highest recall, and Logistic Regression provided the optimal balance on the held-out test set.</span>
             </div>
             <div class="detail-item">
               <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
               </svg>
               <span><strong>Tuned Winning Model:</strong>
-                <code>GaussianNB(var_smoothing=1e-08)</code> optimized via GridSearchCV, yielding <strong>0.7448 CV Recall</strong> and <strong>79% test churn recall</strong>.</span>
+                <code>LogisticRegression(C=0.01, class_weight='balanced', solver='liblinear')</code> achieving <strong>0.8019 CV Recall</strong> and <strong>84% test churn recall</strong> (identifying 320/380 churners).</span>
             </div>
           </div>
 
@@ -687,8 +688,9 @@
             <span class="tech-tag">Scikit-learn</span>
             <span class="tech-tag">Pandas</span>
             <span class="tech-tag">NumPy</span>
+            <span class="tech-tag">XGBoost</span>
             <span class="tech-tag">Seaborn</span>
-            <span class="tech-tag">Gaussian Naive Bayes</span>
+            <span class="tech-tag">Logistic Regression</span>
             <span class="tech-tag">5-Fold CV</span>
             <span class="tech-tag">GridSearchCV</span>
           </div>
@@ -1398,9 +1400,10 @@
         <div class="modal-section-block">
           <h4>Dataset &amp; Problem Framing</h4>
           <p>
-            Trained on the Kaggle Car Price Prediction Challenge dataset. The goal is to build an end-to-end regression model capable
-            of accurately forecasting pre-owned car market valuations based on vehicle characteristics such as production year,
-            mileage, engine volume, fuel type, gearbox, drive wheels, and vehicle specifications.
+            Trained on the Kaggle Car Price Prediction Challenge dataset containing <strong>19,237 records and 18 columns</strong> before preprocessing.
+            The goal is to build an end-to-end regression model capable of predicting the price of a used car based on vehicle characteristics such as
+            production year, mileage, engine volume, fuel type, gearbox, drive wheels, and vehicle specifications. After preprocessing and encoding,
+            the dataset contains <strong>18,923 records and 52 columns</strong> (51 features plus target).
           </p>
         </div>
 
@@ -1409,19 +1412,20 @@
           <h4>Data Cleaning &amp; Feature Engineering Pipeline</h4>
           <ul
             style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.92rem; color: var(--text-secondary); margin-left: 1.25rem; list-style: disc;">
-            <li><strong>Missing-Value Imputation &amp; Type Conversion:</strong> Cleaned and imputed missing attributes, converted raw formatted numeric specifications into appropriate quantitative types.</li>
-            <li><strong>Categorical Features &amp; Combined Info:</strong> Merged car manufacturer and model fields into a cohesive vehicle descriptor to retain brand/model lineage.</li>
-            <li><strong>High-Cardinality Target Encoding:</strong> Applied Target Encoding to the high-cardinality "Car" feature (hundreds of distinct makes/models) using Category Encoders, preserving price variance without dimensionality explosion.</li>
-            <li><strong>Outlier Management:</strong> Performed outlier detection and eliminated extreme price anomalies that severely skewed regression loss distributions.</li>
-            <li><strong>Train / Test Split:</strong> Segregated held-out test data to ensure unbiased final model evaluation.</li>
+            <li><strong>Duplicate &amp; Identifier Removal:</strong> Removed duplicate records and the uninformative <code>ID</code> column.</li>
+            <li><strong>Missing-Value &amp; Numerical Handling:</strong> Imputed missing entries and cleaned/converted formatted numerical features into appropriate quantitative types.</li>
+            <li><strong>Categorical Combination:</strong> Merged car manufacturer and model information into a cohesive vehicle descriptor to preserve brand and model lineage.</li>
+            <li><strong>High-Cardinality Target Encoding:</strong> Applied Target Encoding to the high-cardinality "Car" feature using Category Encoders (applied to full dataset before train/test split).</li>
+            <li><strong>Low-Price Inspection &amp; Outlier Management:</strong> Statistically analyzed 1,633 records (~8.6% of data) priced below 500. They shared the same median production year (2012) and moderate mileage (median ~149k km vs 125k km) and engine volume (2.4 vs 2.0), so they were retained without synthetic distortion. Removed an extreme price outlier.</li>
+            <li><strong>Train / Test Split &amp; Scaling:</strong> Partitioned using a <strong>75/25 split</strong>. Standardized scale-sensitive models (SGD Regressor, Lasso, Ridge, KNN) using <code>StandardScaler</code> fitted strictly on the training set.</li>
           </ul>
         </div>
 
         <!-- Section 3: Models Tested Comparison Table -->
         <div class="modal-section-block">
-          <h4>Model Comparison (5-Fold Cross-Validation on 8 Regressors)</h4>
+          <h4>Model Comparison (5-Fold Cross-Validation on 9 Regressors)</h4>
           <p style="margin-bottom: 0.75rem;">
-            Eight regression models were evaluated using <strong>5-Fold Cross-Validation</strong> with <strong>R²</strong> as the evaluation metric:
+            Nine regression models were tuned using <code>GridSearchCV</code> with <strong>5-Fold Cross-Validation</strong> and <strong>R²</strong> as the evaluation metric. Linear models performed far below tree-based algorithms, indicating non-linear relationships:
           </p>
           <div class="table-responsive">
             <table class="comparison-table">
@@ -1429,7 +1433,7 @@
                 <tr>
                   <th>Model Algorithm</th>
                   <th>Category</th>
-                  <th class="num-col">Mean CV R²</th>
+                  <th class="num-col">Best CV R²</th>
                   <th>Evaluation Notes</th>
                 </tr>
               </thead>
@@ -1438,79 +1442,140 @@
                   <td>Linear Regression</td>
                   <td>Linear Baseline</td>
                   <td class="num-col">0.2623</td>
-                  <td>Baseline regressor; underfitted complex non-linear pricing relationships</td>
+                  <td>Linear baseline; incapable of fitting non-linear depreciation curves</td>
                 </tr>
                 <tr>
                   <td>SGD Regressor</td>
                   <td>Gradient Descent</td>
-                  <td class="num-col">-2.49 &times; 10²⁹</td>
-                  <td>Severe gradient divergence due to unclipped high-magnitude variance</td>
+                  <td class="num-col">0.2623</td>
+                  <td>Iterative linear regression via SGD with standardized features</td>
                 </tr>
                 <tr>
                   <td>Lasso Regression (L1)</td>
                   <td>Regularized Linear</td>
-                  <td class="num-col">0.2624</td>
-                  <td>Enforced feature sparsity; restricted by linear assumptions</td>
+                  <td class="num-col">0.2623</td>
+                  <td>L1 regularization; bounded by linear assumptions</td>
                 </tr>
                 <tr>
                   <td>Ridge Regression (L2)</td>
                   <td>Regularized Linear</td>
                   <td class="num-col">0.2624</td>
-                  <td>Mitigated multicollinearity among correlated specs; equivalent to Lasso</td>
+                  <td>L2 regularization; slight multicollinearity mitigation</td>
                 </tr>
                 <tr class="winner-row">
                   <td><strong>Random Forest Regressor</strong> &starf;</td>
                   <td>Ensemble Bagging</td>
-                  <td class="num-col"><strong>0.7447</strong></td>
-                  <td><strong>Selected Best Model</strong> &mdash; Highest mean CV R²; selected for hyperparameter tuning</td>
+                  <td class="num-col"><strong>0.7175</strong></td>
+                  <td><strong>Selected Winning Model</strong> &mdash; Achieved best test generalization &amp; lowest overfitting gap</td>
                 </tr>
                 <tr>
                   <td>Gradient Boosting Regressor</td>
                   <td>Ensemble Boosting</td>
-                  <td class="num-col">0.6531</td>
-                  <td>Strong non-linear predictive capacity; second highest baseline score</td>
+                  <td class="num-col">0.7581</td>
+                  <td>Highest CV score; second highest test R² (0.7392) with larger train-test gap</td>
+                </tr>
+                <tr>
+                  <td>XGBoost Regressor</td>
+                  <td>Gradient Boosting</td>
+                  <td class="num-col">0.7478</td>
+                  <td>High training fit (0.9609) but lower test generalization (0.7151)</td>
                 </tr>
                 <tr>
                   <td>Decision Tree Regressor</td>
                   <td>Tree-based</td>
-                  <td class="num-col">0.6020</td>
-                  <td>Captured hierarchical splits but susceptible to high variance and overfitting</td>
+                  <td class="num-col">0.6434</td>
+                  <td>Single tree partitioning; prone to high variance</td>
                 </tr>
                 <tr>
                   <td>K-Nearest Neighbors (KNN)</td>
                   <td>Instance-based</td>
-                  <td class="num-col">0.3587</td>
-                  <td>Degraded distance metrics across high-dimensional sparse representations</td>
+                  <td class="num-col">0.5500</td>
+                  <td>Normalized distance-weighted metric across continuous/encoded dimensions</td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
 
+        <!-- Section 3b: Top 3 Final Model Selection on Held-out Test Set -->
+        <div class="modal-section-block">
+          <h4>Final Model Selection (Top 3 Test Set Evaluation)</h4>
+          <p style="margin-bottom: 0.75rem;">
+            The three models with highest cross-validation R² were evaluated on the held-out test set to select the production model:
+          </p>
+          <div class="table-responsive">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Model Algorithm</th>
+                  <th class="num-col">Train R²</th>
+                  <th class="num-col">Test R²</th>
+                  <th class="num-col">MAE</th>
+                  <th class="num-col">MSE</th>
+                  <th class="num-col">Median Abs. Err</th>
+                  <th>Overfitting Gap</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="winner-row">
+                  <td><strong>Random Forest Regressor</strong> &starf;</td>
+                  <td class="num-col">0.8936</td>
+                  <td class="num-col"><strong>0.7488</strong></td>
+                  <td class="num-col">4,521.31</td>
+                  <td class="num-col">81,502,270.78</td>
+                  <td class="num-col">2,462.27</td>
+                  <td><strong>0.145 (Lowest Overfitting)</strong></td>
+                </tr>
+                <tr>
+                  <td>Gradient Boosting Regressor</td>
+                  <td class="num-col">0.9100</td>
+                  <td class="num-col">0.7392</td>
+                  <td class="num-col">4,969.82</td>
+                  <td class="num-col">84,609,846.32</td>
+                  <td class="num-col">2,925.70</td>
+                  <td>0.171</td>
+                </tr>
+                <tr>
+                  <td>XGBoost Regressor</td>
+                  <td class="num-col">0.9609</td>
+                  <td class="num-col">0.7151</td>
+                  <td class="num-col">4,389.53</td>
+                  <td class="num-col">92,444,152.00</td>
+                  <td class="num-col">2,345.41</td>
+                  <td>0.246</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); margin-top: 0.6rem; line-height: 1.55;">
+            Although Gradient Boosting achieved the highest CV score (0.7581), <strong>Random Forest Regressor</strong> was chosen as the final model because it achieved the <strong>highest test R² (0.7488)</strong> and the <strong>smallest generalization gap (0.145)</strong> between train and test scores, demonstrating superior robustness against overfitting.
+          </p>
+        </div>
+
         <!-- Section 4: Hyperparameter Tuning via GridSearchCV -->
         <div class="modal-section-block">
           <h4>Hyperparameter Tuning (GridSearchCV)</h4>
           <p>
-            <code>GridSearchCV</code> was utilized to tune the <strong>Random Forest Regressor</strong> with <strong>5-Fold Cross-Validation</strong> using <strong>R²</strong> as the scoring metric across <strong>24 parameter combinations</strong>:
+            <code>GridSearchCV</code> was used to tune the <strong>Random Forest Regressor</strong> using <strong>5-Fold Cross-Validation</strong> and <strong>R²</strong> as the scoring metric across <strong>144 parameter combinations</strong>:
           </p>
           <ul
             style="display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.88rem; color: var(--text-secondary); margin: 0.5rem 0 0.75rem 1.25rem; list-style: disc;">
-            <li><code>n_estimators</code>: [300, 500]</li>
-            <li><code>max_depth</code>: [8, 10, 15]</li>
-            <li><code>min_samples_split</code>: [2, 5]</li>
-            <li><code>min_samples_leaf</code>: [1, 2]</li>
-            <li><code>max_features</code>: [0.8]</li>
+            <li><code>n_estimators</code>: [200, 300, 500]</li>
+            <li><code>max_depth</code>: [8, 10, 12, 15]</li>
+            <li><code>min_samples_split</code>: [5, 10]</li>
+            <li><code>min_samples_leaf</code>: [2, 4, 6]</li>
+            <li><code>max_features</code>: [0.7, 'sqrt']</li>
           </ul>
           <p style="margin-bottom: 0.5rem;">
-            <strong>Best GridSearchCV Score:</strong> <code style="color: var(--accent-primary); font-weight: 600;">R² = 0.7431</code>
+            <strong>Best GridSearchCV Score:</strong> <code style="color: var(--accent-primary); font-weight: 600;">R² = 0.7175</code>
           </p>
           <div class="code-snippet-box">
 RandomForestRegressor(
     n_estimators=500,
     max_depth=15,
-    min_samples_split=2,
-    min_samples_leaf=1,
-    max_features=0.8,
+    min_samples_split=5,
+    min_samples_leaf=2,
+    max_features=0.7,
     random_state=33
 )</div>
         </div>
@@ -1519,34 +1584,45 @@ RandomForestRegressor(
         <div class="modal-section-block">
           <h4>Final Model Results on Unseen Test Set</h4>
           <p style="margin-bottom: 0.75rem;">
-            The tuned Random Forest Regressor was evaluated on the held-out test set, achieving a <strong>Test R² of approximately 75.2%</strong>:
+            The tuned Random Forest Regressor was evaluated on the held-out test set, achieving a <strong>Test R² of approximately 74.9%</strong>:
           </p>
           <div class="metrics-grid modal-metrics-grid">
             <div class="metric-item">
-              <span class="metric-value">0.9394</span>
+              <span class="metric-value">0.8936</span>
               <span class="metric-label">Train R²</span>
             </div>
             <div class="metric-item">
-              <span class="metric-value">0.7523</span>
-              <span class="metric-label">Test R² (~75.2%)</span>
+              <span class="metric-value">0.7488</span>
+              <span class="metric-label">Test R² (~74.9%)</span>
             </div>
             <div class="metric-item">
-              <span class="metric-value">4,467.51</span>
+              <span class="metric-value">4,521.31</span>
               <span class="metric-label">Mean Absolute Error (MAE)</span>
             </div>
             <div class="metric-item">
-              <span class="metric-value">2,440.52</span>
+              <span class="metric-value">2,462.27</span>
               <span class="metric-label">Median Absolute Error</span>
             </div>
             <div class="metric-item">
-              <span class="metric-value">8.04 &times; 10⁷</span>
+              <span class="metric-value">8.15 &times; 10⁷</span>
               <span class="metric-label">Mean Squared Error (MSE)</span>
             </div>
           </div>
           <p style="font-size: 0.88rem; color: var(--text-secondary); margin-top: 0.6rem; line-height: 1.55;">
-            The <strong>MAE of 4,467.51</strong> indicates that model predictions deviate from actual market prices by approximately $4,468 on average.
-            The <strong>Actual vs Predicted</strong> evaluation plot demonstrates strong alignment along the diagonal reference line across diverse vehicle price points.
+            The <strong>MAE of 4,521.31</strong> indicates that predictions deviate from actual car prices by approximately 4,521 on average in absolute terms.
+            The substantially lower <strong>Median Absolute Error (≈ 2,462)</strong> demonstrates that the vast majority of predictions closely track real transaction values, with larger residuals primarily driven by rare, high-luxury vehicles.
+            The <strong>Actual vs Predicted</strong> plot verified consistent alignment along the diagonal reference line across diverse price ranges.
           </p>
+        </div>
+
+        <!-- Section 6: Limitations & Considerations -->
+        <div class="modal-section-block">
+          <h4>Limitations &amp; Methodology Notes</h4>
+          <ul
+            style="display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.88rem; color: var(--text-secondary); margin-left: 1.25rem; list-style: disc;">
+            <li><strong>Target Encoding Leakage Consideration:</strong> The Target Encoding of the <code>Car</code> feature was fitted on the full dataset prior to train/test partitioning; fitting strictly within cross-validation folds represents an area for even stricter generalization guarantees.</li>
+            <li><strong>Low-Priced Outliers:</strong> Unusually low prices (&lt;500) were retained due to lack of an exclusionary empirical pattern, which naturally bounds the upper limit of achievable regression precision.</li>
+          </ul>
         </div>
 
         <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.5rem;">
@@ -1586,38 +1662,89 @@ RandomForestRegressor(
         <div class="modal-section-block">
           <h4>Dataset &amp; Business Problem Framing</h4>
           <p>
-            Trained on the Kaggle Telco Customer Churn dataset comprising <strong>7,043 customer records and 21 attributes</strong>.
-            The objective is binary classification: predicting whether a telecommunications subscriber will cancel their service (<code>Churn = 1</code>)
-            or remain subscribed (<code>Churn = 0</code>). Because unpredicted churn leads directly to customer and revenue loss, <strong>Recall</strong>
-            was selected as the primary optimization metric to capture as many at-risk customers as possible.
+            Trained on the Kaggle Telco Customer Churn dataset comprising <strong>7,043 customer records and 21 columns</strong> before preprocessing.
+            The target variable is binary: <code>Churn = 0</code> (retained) versus <code>Churn = 1</code> (churned).
+            Features span customer demographics, tenure, phone and internet services, online security and support, streaming services, contract type, billing info, payment methods, monthly charges, and total charges.
+            Because undetected churn translates directly to recurring revenue loss, <strong>Recall for the churn class</strong> was selected as the primary metric to detect the maximum number of potential churners.
           </p>
         </div>
 
         <!-- Section 2: Pipeline Steps -->
         <div class="modal-section-block">
-          <h4>Data Cleaning &amp; Feature Encoding Pipeline</h4>
+          <h4>Data Cleaning &amp; Feature Preprocessing Pipeline</h4>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0.6rem;">
+            The raw dataset contained extensive missing values across critical features, requiring principled imputation rather than discarding data:
+          </p>
+          <div class="table-responsive" style="max-width: 480px; margin-bottom: 0.75rem;">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Feature Column</th>
+                  <th class="num-col">Missing Values</th>
+                  <th>Imputation / Handling Strategy</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>tenure</code></td>
+                  <td class="num-col">2,500</td>
+                  <td>Derived mathematically: <code>TotalCharges ÷ MonthlyCharges</code></td>
+                </tr>
+                <tr>
+                  <td><code>MonthlyCharges</code></td>
+                  <td class="num-col">1,500</td>
+                  <td>Imputed via median of customer cohorts sharing identical services &amp; contract</td>
+                </tr>
+                <tr>
+                  <td><code>StreamingTV</code></td>
+                  <td class="num-col">1,500</td>
+                  <td>Imputed using related service subscriptions and mode within groups</td>
+                </tr>
+                <tr>
+                  <td><code>Partner</code></td>
+                  <td class="num-col">1,000</td>
+                  <td>Marked missing values explicitly as <code>'unknown'</code></td>
+                </tr>
+                <tr>
+                  <td><code>InternetService</code></td>
+                  <td class="num-col">1,000</td>
+                  <td>Imputed using related service indicators and modal group assignment</td>
+                </tr>
+                <tr>
+                  <td><code>gender</code></td>
+                  <td class="num-col">750</td>
+                  <td>Marked missing values explicitly as <code>'unknown'</code></td>
+                </tr>
+                <tr>
+                  <td><code>TotalCharges</code></td>
+                  <td class="num-col">11</td>
+                  <td>Converted blank strings to NaN, then estimated from <code>MonthlyCharges &times; tenure</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
           <ul
             style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.92rem; color: var(--text-secondary); margin-left: 1.25rem; list-style: disc;">
-            <li><strong>Missing-Value Imputation &amp; Casting:</strong> Converted <code>TotalCharges</code> into numerical format; estimated missing values using service tenure and monthly bill distributions. Final cleaned dataset: 7,040 rows and 20 columns.</li>
-            <li><strong>Identifier Removal:</strong> Removed <code>customerID</code> to ensure the model learns true behavioral patterns rather than arbitrary database keys.</li>
+            <li><strong>Identifier &amp; Clean Sample:</strong> Dropped uninformative <code>customerID</code>. Removed only 3 completely unrecoverable rows, retaining <strong>7,040 cleaned customer records and 20 columns</strong> before encoding.</li>
+            <li><strong>Redundancy Consolidation:</strong> Merged redundant sub-categories such as <em>"No internet service"</em> and <em>"No phone service"</em> directly into <em>"No"</em>.</li>
             <li><strong>Strategic Multi-Method Encoding:</strong>
               <ul style="margin: 0.35rem 0 0 1rem; list-style: circle; display: flex; flex-direction: column; gap: 0.3rem;">
-                <li><strong>Label Encoding:</strong> Applied to binary categorical features (Partner, Dependents, PhoneService, etc.).</li>
-                <li><strong>One-Hot Encoding:</strong> Applied to nominal multi-category features (PaymentMethod, InternetService, Contract lines).</li>
-                <li><strong>Ordinal Encoding:</strong> Applied to <code>Contract</code> (<em>Month-to-month &rarr; 0, One year &rarr; 1, Two year &rarr; 2</em>) preserving intrinsic commitment hierarchy.</li>
+                <li><strong>Label Encoding:</strong> Applied to binary categorical features.</li>
+                <li><strong>One-Hot Encoding:</strong> Applied to nominal categorical features (gender, Partner, Dependents, InternetService, PaymentMethod).</li>
+                <li><strong>Ordinal Encoding:</strong> Applied to <code>Contract</code> (<em>Month-to-month &rarr; 0, One year &rarr; 1, Two year &rarr; 2</em>) preserving progressive commitment hierarchy.</li>
               </ul>
-              Processed feature space expanded cleanly to <strong>30 features</strong>.
+              Processed feature space reached <strong>29 features (30 columns including target)</strong>.
             </li>
-            <li><strong>Outlier &amp; Distribution Analysis:</strong> Evaluated box plots across continuous features (<code>tenure</code>, <code>MonthlyCharges</code>, <code>TotalCharges</code>) to verify data integrity.</li>
-            <li><strong>Train / Test Split:</strong> Stratified 80/20 train-test partition to safeguard uncompromised test set validation.</li>
+            <li><strong>Outlier &amp; Distribution Analysis:</strong> Box plots were utilized to inspect potential outliers in numerical features (<code>MonthlyCharges</code>, <code>TotalCharges</code>, <code>tenure</code>).</li>
+            <li><strong>Train / Test Split &amp; Scaling:</strong> Partitioned 80/20 (5,632 training records, 1,408 held-out test records). Standardized scale-sensitive models (KNN, SVC, Logistic Regression, SGD) using <code>StandardScaler</code> fitted solely on training data.</li>
           </ul>
         </div>
 
         <!-- Section 3: Models Tested Comparison Table -->
         <div class="modal-section-block">
-          <h4>Model Comparison (5-Fold Cross-Validation on 6 Classifiers)</h4>
+          <h4>Model Comparison (5-Fold Cross-Validation on 7 Classifiers)</h4>
           <p style="margin-bottom: 0.75rem;">
-            Six classification algorithms were benchmarked under <strong>5-Fold Cross-Validation</strong> using <strong>Recall</strong> as the primary evaluation metric:
+            Seven classification models were tuned using <code>GridSearchCV</code> with <strong>5-Fold Cross-Validation</strong>, scored by <strong>Recall</strong>. <code>class_weight='balanced'</code> was selected for linear models to counteract class imbalance (~27% churn rate):
           </p>
           <div class="table-responsive">
             <table class="comparison-table">
@@ -1625,67 +1752,127 @@ RandomForestRegressor(
                 <tr>
                   <th>Model Algorithm</th>
                   <th>Category</th>
-                  <th class="num-col">Mean CV Recall</th>
+                  <th class="num-col">Best CV Recall</th>
                   <th>Evaluation Notes</th>
                 </tr>
               </thead>
               <tbody>
+                <tr>
+                  <td>SGD Classifier</td>
+                  <td>Linear / SGD</td>
+                  <td class="num-col">0.827</td>
+                  <td>Balanced loss weighting yielded highest cross-validation recall</td>
+                </tr>
+                <tr>
+                  <td>Support Vector Classifier (SVC)</td>
+                  <td>Kernel / Linear SVC</td>
+                  <td class="num-col">0.824</td>
+                  <td>Linear kernel with balanced class weights; high sensitivity to churn boundary</td>
+                </tr>
                 <tr class="winner-row">
-                  <td><strong>Gaussian Naive Bayes</strong> &starf;</td>
-                  <td>Probabilistic Classifier</td>
-                  <td class="num-col"><strong>0.723</strong></td>
-                  <td><strong>Selected Best Model</strong> &mdash; Highest baseline recall; effectively captured conditional churn likelihood</td>
-                </tr>
-                <tr>
-                  <td>Logistic Regression</td>
+                  <td><strong>Logistic Regression</strong> &starf;</td>
                   <td>Linear Classifier</td>
-                  <td class="num-col">0.537</td>
-                  <td>Standard linear baseline; balanced accuracy but moderate recall on churners</td>
+                  <td class="num-col"><strong>0.802</strong></td>
+                  <td><strong>Selected Winning Model</strong> &mdash; Produced best overall balance of recall, precision, and F1-score</td>
                 </tr>
                 <tr>
-                  <td>Decision Tree</td>
-                  <td>Tree-based</td>
-                  <td class="num-col">0.500</td>
-                  <td>Prone to false negatives on unpruned leaf splits</td>
-                </tr>
-                <tr>
-                  <td>Random Forest</td>
-                  <td>Ensemble Bagging</td>
-                  <td class="num-col">0.461</td>
-                  <td>Biased toward majority class (non-churners), lowering recall</td>
+                  <td>Gaussian Naive Bayes</td>
+                  <td>Probabilistic</td>
+                  <td class="num-col">0.745</td>
+                  <td>Strong probabilistic baseline recall under Gaussian prior assumptions</td>
                 </tr>
                 <tr>
                   <td>K-Nearest Neighbors (KNN)</td>
                   <td>Instance-based</td>
-                  <td class="num-col">0.405</td>
-                  <td>Degraded distance calculation across sparse one-hot dimensions</td>
+                  <td class="num-col">0.542</td>
+                  <td>Normalized distance calculations diluted across expanded one-hot space</td>
                 </tr>
                 <tr>
-                  <td>Support Vector Classifier (SVC)</td>
-                  <td>Kernel Method</td>
-                  <td class="num-col">0.000</td>
-                  <td>Failed to detect minority churn class under default decision threshold</td>
+                  <td>XGBoost Classifier</td>
+                  <td>Ensemble Boosting</td>
+                  <td class="num-col">0.510</td>
+                  <td>Hindered by majority class dominance without positive scale weighting</td>
+                </tr>
+                <tr>
+                  <td>Random Forest Classifier</td>
+                  <td>Ensemble Bagging</td>
+                  <td class="num-col">0.482</td>
+                  <td>Tree voting biased toward majority non-churners, diminishing recall</td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
 
+        <!-- Section 3b: Top 3 Final Model Selection on Held-out Test Set -->
+        <div class="modal-section-block">
+          <h4>Final Model Selection (Top 3 Test Set Evaluation)</h4>
+          <p style="margin-bottom: 0.75rem;">
+            The three models with highest cross-validation recall were evaluated on the held-out test set to determine final deployment suitability:
+          </p>
+          <div class="table-responsive">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Model Algorithm</th>
+                  <th class="num-col">Accuracy</th>
+                  <th class="num-col">Churn Precision</th>
+                  <th class="num-col">Churn Recall</th>
+                  <th class="num-col">Churn F1-Score</th>
+                  <th>Selection Assessment</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="winner-row">
+                  <td><strong>Logistic Regression</strong> &starf;</td>
+                  <td class="num-col"><strong>74.1%</strong></td>
+                  <td class="num-col"><strong>51%</strong></td>
+                  <td class="num-col"><strong>84%</strong></td>
+                  <td class="num-col"><strong>64%</strong></td>
+                  <td><strong>Best Balance</strong> &mdash; Highest accuracy &amp; precision with near-peak recall</td>
+                </tr>
+                <tr>
+                  <td>Support Vector Classifier (SVC linear)</td>
+                  <td class="num-col">70.9%</td>
+                  <td class="num-col">48%</td>
+                  <td class="num-col">85%</td>
+                  <td class="num-col">61%</td>
+                  <td>Similar recall (85%), but lower precision (48%) and accuracy (70.9%)</td>
+                </tr>
+                <tr>
+                  <td>SGD Classifier</td>
+                  <td class="num-col">70.0%</td>
+                  <td class="num-col">47%</td>
+                  <td class="num-col">86%</td>
+                  <td class="num-col">61%</td>
+                  <td>Highest raw recall (86%), but higher false positive volume (47% precision)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); margin-top: 0.6rem; line-height: 1.55;">
+            While all three top models achieved similar high recall (~84&ndash;86%), <strong>Logistic Regression</strong> achieved the best trade-off with the highest accuracy (74.1%), highest precision (51%), and best F1-Score (64%), making it the most cost-effective solution for customer retention campaigns.
+          </p>
+        </div>
+
         <!-- Section 4: Hyperparameter Tuning via GridSearchCV -->
         <div class="modal-section-block">
           <h4>Hyperparameter Tuning (GridSearchCV)</h4>
           <p>
-            <code>GridSearchCV</code> with <strong>5-Fold Cross-Validation</strong> was executed to optimize Gaussian Naive Bayes:
+            <code>GridSearchCV</code> with <strong>5-Fold Cross-Validation</strong> was executed to optimize <strong>Logistic Regression</strong> using <strong>Recall</strong> as the scoring metric:
           </p>
           <ul
             style="display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.88rem; color: var(--text-secondary); margin: 0.5rem 0 0.75rem 1.25rem; list-style: disc;">
-            <li>Optimized hyperparameter: <code>var_smoothing</code></li>
-            <li>Best hyperparameter setting: <code style="color: var(--accent-primary); font-weight: 600;">var_smoothing = 1e-08</code></li>
-            <li>Best Cross-Validation Recall: <code style="color: var(--accent-primary); font-weight: 600;">0.7448</code> (improved from 0.723)</li>
+            <li>Regularization strength: <code>C = 0.01</code></li>
+            <li>Class weighting strategy: <code>class_weight = 'balanced'</code></li>
+            <li>Optimization solver: <code>solver = 'liblinear'</code></li>
+            <li>Best Cross-Validation Recall: <code style="color: var(--accent-primary); font-weight: 600;">0.8019</code></li>
           </ul>
           <div class="code-snippet-box">
-GaussianNB(
-    var_smoothing=1e-08
+LogisticRegression(
+    C=0.01,
+    class_weight='balanced',
+    solver='liblinear'
 )</div>
         </div>
 
@@ -1693,27 +1880,27 @@ GaussianNB(
         <div class="modal-section-block">
           <h4>Final Model Results &amp; Confusion Matrix (Unseen Test Set)</h4>
           <p style="margin-bottom: 0.75rem;">
-            The tuned Gaussian Naive Bayes model was evaluated on the held-out test set, identifying <strong>301 out of 380 actual churn cases (~79% Recall)</strong>:
+            The tuned Logistic Regression model was evaluated on the held-out test set, identifying <strong>320 out of 380 actual churn cases (84% Recall)</strong>:
           </p>
           <div class="metrics-grid modal-metrics-grid">
             <div class="metric-item">
-              <span class="metric-value">79%</span>
-              <span class="metric-label">Churn Recall</span>
+              <span class="metric-value">84%</span>
+              <span class="metric-label">Churn Recall (320/380)</span>
             </div>
             <div class="metric-item">
-              <span class="metric-value">74.93%</span>
+              <span class="metric-value">74.08%</span>
               <span class="metric-label">Test Accuracy</span>
             </div>
             <div class="metric-item">
-              <span class="metric-value">75.11%</span>
+              <span class="metric-value">73.54%</span>
               <span class="metric-label">Train Accuracy</span>
             </div>
             <div class="metric-item">
-              <span class="metric-value">63%</span>
+              <span class="metric-value">64%</span>
               <span class="metric-label">Churn F1-Score</span>
             </div>
             <div class="metric-item">
-              <span class="metric-value">52%</span>
+              <span class="metric-value">51%</span>
               <span class="metric-label">Churn Precision</span>
             </div>
           </div>
@@ -1731,21 +1918,34 @@ GaussianNB(
               <tbody>
                 <tr>
                   <td style="font-weight: 600;">Actual: No Churn (0)</td>
-                  <td style="text-align: center; font-family: var(--font-mono); font-weight: 600; color: var(--text-primary);">754 (True Negatives)</td>
-                  <td style="text-align: center; font-family: var(--font-mono); color: var(--text-secondary);">274 (False Positives)</td>
+                  <td style="text-align: center; font-family: var(--font-mono); font-weight: 600; color: var(--text-primary);">723 (True Negatives)</td>
+                  <td style="text-align: center; font-family: var(--font-mono); color: var(--text-secondary);">305 (False Positives)</td>
                 </tr>
                 <tr class="winner-row">
                   <td style="font-weight: 600;">Actual: Churn (1)</td>
-                  <td style="text-align: center; font-family: var(--font-mono); color: var(--text-secondary);">79 (False Negatives)</td>
-                  <td style="text-align: center; font-family: var(--font-mono); font-weight: 700; color: var(--accent-primary);">301 (True Positives &starf;)</td>
+                  <td style="text-align: center; font-family: var(--font-mono); color: var(--text-secondary);">60 (False Negatives)</td>
+                  <td style="text-align: center; font-family: var(--font-mono); font-weight: 700; color: var(--accent-primary);">320 (True Positives &starf;)</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
           <p style="font-size: 0.88rem; color: var(--text-secondary); margin-top: 0.75rem; line-height: 1.55;">
-            The model correctly flags <strong>79% of churners (301 of 380)</strong>, empowering proactive retention campaigns. The moderate precision (52%) represents an intentional and advantageous trade-off in customer retention economics, where the cost of extending retention perks to non-churning customers is far lower than the recurring revenue loss of an undetected churned customer.
+            The model correctly identifies <strong>320 out of 380 actual churners (~84% Recall)</strong>, ensuring that only 60 churners are missed. The precision of 51% indicates that some non-churners are flagged as potential risks; in subscription business economics, this is an advantageous trade-off because retention incentives or proactive outreach cost far less than the loss of recurring customer lifetime value.
           </p>
+        </div>
+
+        <!-- Section 6: Limitations & Future Work -->
+        <div class="modal-section-block">
+          <h4>Limitations &amp; Future Work</h4>
+          <ul
+            style="display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.88rem; color: var(--text-secondary); margin-left: 1.25rem; list-style: disc;">
+            <li><strong>Pipeline Integration:</strong> Move imputation and scaling into a <code>scikit-learn Pipeline</code> to fit strictly within cross-validation training folds.</li>
+            <li><strong>Threshold Tuning &amp; AUC:</strong> Incorporate ROC-AUC and PR-AUC curves to fine-tune the decision threshold, further optimizing precision against recall.</li>
+            <li><strong>Tree Model Weighting:</strong> Apply class weighting (<code>scale_pos_weight</code> / <code>class_weight</code>) to tree-based models for a more balanced algorithmic comparison.</li>
+            <li><strong>Interpretability:</strong> Analyze Logistic Regression coefficients to identify the principal behavioral drivers of churn.</li>
+            <li><strong>Model Serialization:</strong> Save the trained model artifact using <code>joblib</code> for reusable inference and microservice deployment.</li>
+          </ul>
         </div>
 
         <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.5rem;">
