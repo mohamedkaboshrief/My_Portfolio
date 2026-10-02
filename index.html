@@ -360,7 +360,8 @@
           </div>
 
           <!-- View More / View Less Toggle Button -->
-          <button type="button" class="skill-toggle-btn" id="ml-skills-toggle" aria-expanded="false" aria-controls="ml-skills-expandable" title="Toggle full list of Machine Learning skills">
+          <button type="button" class="skill-toggle-btn" id="ml-skills-toggle" aria-expanded="false"
+            aria-controls="ml-skills-expandable" title="Toggle full list of Machine Learning skills">
             <span class="skill-toggle-text">View More</span>
             <span class="skill-toggle-pill">+11</span>
             <svg class="skill-toggle-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
@@ -479,9 +480,17 @@
             <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
               <span class="project-badge featured-tag">Featured ML Project</span>
               <span class="project-badge">Regression</span>
-              <span class="project-badge">Individual</span>
+              <span class="project-badge">5-Fold CV Tuning</span>
             </div>
             <div class="project-links">
+              <a href="https://github.com/mohamedkaboshrief/car-price-prediction#readme" target="_blank"
+                rel="noopener noreferrer" class="project-icon-link" aria-label="Car Price Prediction Documentation"
+                title="View Project Documentation">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </a>
               <a href="https://github.com/mohamedkaboshrief/car-price-prediction" target="_blank"
                 rel="noopener noreferrer" class="project-icon-link" aria-label="Car Price Prediction GitHub Repository"
                 title="View GitHub Repo">
@@ -501,11 +510,13 @@
             </div>
           </div>
 
-          <h3 class="project-title">Car Price Prediction</h3>
+          <h3 class="project-title">Used-Car Valuation &amp; Price Prediction</h3>
           <p class="project-desc">
-            An end-to-end Machine Learning regression project predicting used-car valuations based on multi-attribute vehicle
-            characteristics. Incorporates automated data preprocessing, Target Encoding for high-cardinality features, 5-fold cross-validation
-            across 9 regressors, and GridSearchCV hyperparameter tuning.
+            An end-to-end Machine Learning regression project predicting market valuations from multi-attribute vehicle
+            characteristics across 19,237 records. Features automated data cleaning, cohort-based low-price analysis,
+            high-cardinality <code>Target Encoding</code>, 75/25 train/test partitioning with feature standardization,
+            rigorous 5-fold cross-validation benchmarking across 9 regressors, and <code>GridSearchCV</code>
+            hyperparameter tuning to deliver a robust production model.
           </p>
 
           <!-- Verified Key Test Results Grid -->
@@ -516,7 +527,7 @@
             </div>
             <div class="metric-item">
               <span class="metric-value">4,521.31</span>
-              <span class="metric-label">Mean Absolute Error</span>
+              <span class="metric-label">Mean Absolute Error (MAE)</span>
             </div>
             <div class="metric-item">
               <span class="metric-value">2,462.27</span>
@@ -524,7 +535,7 @@
             </div>
             <div class="metric-item">
               <span class="metric-value">8.15 &times; 10⁷</span>
-              <span class="metric-label">Mean Squared Error</span>
+              <span class="metric-label">Mean Squared Error (MSE)</span>
             </div>
           </div>
 
@@ -534,26 +545,37 @@
               <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
               </svg>
-              <span><strong>Data Preprocessing:</strong> Handled missing values, converted numerical features, merged manufacturer/model info, analyzed 1,633 low-price records (&lt;500), and eliminated extreme price outliers (18,923 clean rows, 52 columns).</span>
+              <span><strong>Data Cleaning &amp; Cohort Analysis:</strong> Handled missing values, formatted quantitative
+                features, merged manufacturer/model specs, and conducted statistical analysis on 1,633 low-price records
+                (&lt;500) proving authentic utility rather than noise, while eliminating extreme price outliers
+                (yielding 18,923 clean rows, 52 columns).</span>
             </div>
             <div class="detail-item">
               <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
               </svg>
-              <span><strong>Feature Engineering:</strong> Applied Target Encoding to the high-cardinality "Car" feature using Category Encoders to retain brand/model lineage without dimensionality explosion.</span>
+              <span><strong>High-Cardinality Target Encoding:</strong> Leveraged <code>Category Encoders</code> to
+                perform supervised Target Encoding on the high-cardinality "Car" feature. Preserved vital brand and
+                model lineage without causing the dimensional explosion or severe sparsity of traditional One-Hot
+                Encoding.</span>
             </div>
             <div class="detail-item">
               <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
               </svg>
-              <span><strong>Model Comparison &amp; Selection:</strong> 5-Fold Cross-Validation across 9 regressors. Random Forest was selected as final model (CV R²: 0.7175, Test R²: 0.7488) over Gradient Boosting (CV R²: 0.7581) due to highest test score and lowest overfitting gap (0.145).</span>
+              <span><strong>9-Regressor CV Benchmarking:</strong> Conducted 5-Fold Cross-Validation across 9 regressors
+                spanning linear, kernel, and ensemble families. Selected Random Forest (CV R²: 0.7175, Test R²: 0.7488)
+                over Gradient Boosting (CV R²: 0.7581) due to superior generalization and a smaller overfitting gap
+                (0.145 vs 0.174).</span>
             </div>
             <div class="detail-item">
               <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
               </svg>
-              <span><strong>Tuned Winning Model:</strong>
-                <code>RandomForestRegressor(n_estimators=500, max_depth=15, min_samples_split=5, min_samples_leaf=2, max_features=0.7, random_state=33)</code> tuned via GridSearchCV (144 parameter combinations).</span>
+              <span><strong>Tuned Winning Model &amp; Validation:</strong> Optimized hyperparameters via
+                <code>GridSearchCV</code> (144 configurations) yielding
+                <code>RandomForestRegressor(n_estimators=500, max_depth=15, min_samples_split=5, min_samples_leaf=2, max_features=0.7)</code>,
+                achieving $R^2 = 0.7488$ and MedAE of 2,462.27 on unseen test data.</span>
             </div>
           </div>
 
@@ -563,36 +585,47 @@
             <span class="tech-tag">Scikit-learn</span>
             <span class="tech-tag">Pandas</span>
             <span class="tech-tag">NumPy</span>
-            <span class="tech-tag">XGBoost</span>
             <span class="tech-tag">Category Encoders</span>
+            <span class="tech-tag">Target Encoding</span>
             <span class="tech-tag">Random Forest</span>
-            <span class="tech-tag">5-Fold CV</span>
+            <span class="tech-tag">Gradient Boosting</span>
+            <span class="tech-tag">XGBoost</span>
+            <span class="tech-tag">StandardScaler</span>
             <span class="tech-tag">GridSearchCV</span>
+            <span class="tech-tag">5-Fold CV</span>
           </div>
 
           <div class="project-card-footer">
-            <button type="button" class="modal-trigger-btn" id="open-car-modal-btn">
-              <span>View Model Pipeline &amp; Comparison</span>
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
             <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
-              <a href="https://github.com/mohamedkaboshrief/car-price-prediction" target="_blank"
-                rel="noopener noreferrer" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.88rem;">
-                <span>GitHub Repo</span>
+              <button type="button" class="btn btn-primary" id="open-car-modal-btn"
+                style="padding: 0.5rem 1.1rem; font-size: 0.88rem; cursor: pointer;">
+                <span>View Model Pipeline</span>
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+              <a href="https://github.com/mohamedkaboshrief/car-price-prediction#readme" target="_blank"
+                rel="noopener noreferrer" class="modal-trigger-btn" style="text-decoration: none;">
+                <span>Documentation</span>
                 <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                   <path stroke-linecap="round" stroke-linejoin="round"
                     d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
               </a>
-              <a href="https://www.kaggle.com/datasets/deepcontractor/car-price-prediction-challenge/data" target="_blank"
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+              <a href="https://github.com/mohamedkaboshrief/car-price-prediction" target="_blank"
                 rel="noopener noreferrer" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.88rem;">
-                <span>Kaggle Dataset</span>
-                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                <span>GitHub Repo</span>
+                <svg fill="currentColor" viewBox="0 0 24 24" style="width: 15px; height: 15px;">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
                 </svg>
+              </a>
+              <a href="https://www.kaggle.com/datasets/deepcontractor/car-price-prediction-challenge/data"
+                target="_blank" rel="noopener noreferrer" class="btn btn-outline"
+                style="padding: 0.5rem 1rem; font-size: 0.88rem;">
+                <span>Kaggle Dataset</span>
               </a>
             </div>
           </div>
@@ -623,9 +656,9 @@
                     d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
                 </svg>
               </a>
-              <a href="https://www.kaggle.com/datasets/jethwaaatmik/telco-customer-churn-dataset"
-                target="_blank" rel="noopener noreferrer" class="project-icon-link"
-                aria-label="Telco Customer Churn Kaggle Dataset" title="View Kaggle Dataset">
+              <a href="https://www.kaggle.com/datasets/jethwaaatmik/telco-customer-churn-dataset" target="_blank"
+                rel="noopener noreferrer" class="project-icon-link" aria-label="Telco Customer Churn Kaggle Dataset"
+                title="View Kaggle Dataset">
                 <svg fill="currentColor" viewBox="0 0 24 24">
                   <path
                     d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.186c0 .211-.105.336-.316.336H5.297c-.211 0-.316-.125-.316-.336V.336C4.981.125 5.086 0 5.297 0h2.674c.211 0 .316.125.316.336v14.717l6.326-6.495c.141-.164.305-.246.492-.246h3.28c.164 0 .258.047.281.141.023.117-.023.211-.141.281l-6.795 6.772 7.006 7.973c.117.07.164.164.141.281z" />
@@ -636,7 +669,12 @@
 
           <h3 class="project-title">Telco Customer Churn Classification &amp; Deployment</h3>
           <p class="project-desc">
-            An end-to-end Machine Learning classification and deployment project predicting customer churn to safeguard recurring telecom revenue. Features comprehensive EDA, principled data cleaning, a unified Scikit-learn preprocessing pipeline (<code>ColumnTransformer</code>), automated feature selection (<code>SelectKBest</code>), Stratified train/test splitting, 5-fold cross-validation tuning across 5 classifiers, threshold trade-off optimization prioritizing <strong>Recall</strong>, and interactive real-time deployment on <strong>Streamlit</strong>.
+            An end-to-end Machine Learning classification and deployment project predicting customer churn to safeguard
+            recurring telecom revenue. Features comprehensive EDA, principled data cleaning, a unified Scikit-learn
+            preprocessing pipeline (<code>ColumnTransformer</code>), automated feature selection
+            (<code>SelectKBest</code>), Stratified train/test splitting, 5-fold cross-validation tuning across 5
+            classifiers, threshold trade-off optimization prioritizing <strong>Recall</strong>, and interactive
+            real-time deployment on <strong>Streamlit</strong>.
           </p>
 
           <!-- Verified Key Test Results Grid -->
@@ -665,25 +703,39 @@
               <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
               </svg>
-              <span><strong>EDA &amp; Data Cleaning:</strong> Explored 7,043 customer records across 21 features. Set blank <code>TotalCharges</code> to 0 with <code>tenure = 0</code>, estimated missing tenure and MonthlyCharges, replaced "No internet/phone service" with "No", dropped duplicate rows, and removed uninformative <code>customerID</code> as well as <code>gender</code> due to negligible churn impact.</span>
+              <span><strong>EDA &amp; Data Cleaning:</strong> Explored 7,043 customer records across 21 features. Set
+                blank <code>TotalCharges</code> to 0 with <code>tenure = 0</code>, estimated missing tenure and
+                MonthlyCharges, replaced "No internet/phone service" with "No", dropped duplicate rows, and removed
+                uninformative <code>customerID</code> as well as <code>gender</code> due to negligible churn
+                impact.</span>
             </div>
             <div class="detail-item">
               <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
               </svg>
-              <span><strong>Pipeline Preprocessing &amp; Feature Selection:</strong> Engineered a robust <code>ColumnTransformer</code> integrating <code>SimpleImputer</code>, <code>StandardScaler</code>, <code>OrdinalEncoder</code>, and <code>OneHotEncoder</code>. Integrated <code>SelectKBest(f_classif)</code> inside the pipeline with k &isin; [5, 10, 15, 20, all] to guarantee zero data leakage during cross-validation.</span>
+              <span><strong>Pipeline Preprocessing &amp; Feature Selection:</strong> Engineered a robust
+                <code>ColumnTransformer</code> integrating <code>SimpleImputer</code>, <code>StandardScaler</code>,
+                <code>OrdinalEncoder</code>, and <code>OneHotEncoder</code>. Integrated
+                <code>SelectKBest(f_classif)</code> inside the pipeline with k &isin; [5, 10, 15, 20, all] to guarantee
+                zero data leakage during cross-validation.</span>
             </div>
             <div class="detail-item">
               <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
               </svg>
-              <span><strong>Stratified Split &amp; Recall-Optimized 5-Fold CV:</strong> Stratified 75/25 split (<code>stratify=y</code>, <code>random_state=44</code>) preserving churn distribution. Tuned 5 classifiers (Logistic Regression, SVC, Gradient Boosting, Random Forest, KNN) using <code>GridSearchCV</code> scored specifically on Recall to minimize costly False Negatives.</span>
+              <span><strong>Stratified Split &amp; Recall-Optimized 5-Fold CV:</strong> Stratified 75/25 split
+                (<code>stratify=y</code>, <code>random_state=44</code>) preserving churn distribution. Tuned 5
+                classifiers (Logistic Regression, SVC, Gradient Boosting, Random Forest, KNN) using
+                <code>GridSearchCV</code> scored specifically on Recall to minimize costly False Negatives.</span>
             </div>
             <div class="detail-item">
               <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
               </svg>
-              <span><strong>Winning Model &amp; Streamlit Cloud:</strong> Selected <strong>Logistic Regression</strong> (86.42% Recall, 70.66% Accuracy, 60.90% F1, 0.842 ROC-AUC). Retained threshold 0.5 to maximize recall over 0.6. Deployed as an interactive <strong>Streamlit Web App</strong> handling dependent input features.</span>
+              <span><strong>Winning Model &amp; Streamlit Cloud:</strong> Selected <strong>Logistic Regression</strong>
+                (86.42% Recall, 70.66% Accuracy, 60.90% F1, 0.842 ROC-AUC). Retained threshold 0.5 to maximize recall
+                over 0.6. Deployed as an interactive <strong>Streamlit Web App</strong> handling dependent input
+                features.</span>
             </div>
           </div>
 
@@ -1287,8 +1339,8 @@
                 </svg>
                 <span>GitHub</span>
               </a>
-              <a href="https://www.linkedin.com/in/mohamed-aboshrief-5a19b1309" target="_blank" rel="noopener noreferrer"
-                class="profile-pill-link">
+              <a href="https://www.linkedin.com/in/mohamed-aboshrief-5a19b1309" target="_blank"
+                rel="noopener noreferrer" class="profile-pill-link">
                 <svg fill="currentColor" viewBox="0 0 24 24">
                   <path
                     d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
@@ -1411,13 +1463,38 @@
       </div>
 
       <div class="modal-scrollable-content">
+        <!-- Regression Pipeline Highlight Banner -->
+        <div class="modal-highlight-box">
+          <div style="flex: 1; min-width: 240px;">
+            <div style="font-weight: 700; color: var(--accent-primary); margin-bottom: 0.25rem; font-size: 0.95rem;">
+              End-to-End Regression Pipeline &amp; Model Optimization
+            </div>
+            <p style="margin: 0; font-size: 0.88rem; color: var(--text-secondary);">
+              Benchmarked 9 regression algorithms with 5-fold cross-validation and Target Encoding. Tuned Random Forest
+              achieves <strong>R² = 0.7488</strong>, MedAE of <strong>2,462.27</strong>, and the smallest generalization
+              gap (0.145).
+            </p>
+          </div>
+          <a href="https://github.com/mohamedkaboshrief/car-price-prediction" target="_blank" rel="noopener noreferrer"
+            class="btn btn-primary" style="padding: 0.55rem 1.15rem; font-size: 0.88rem; flex-shrink: 0;">
+            <span>Explore Codebase</span>
+            <svg fill="currentColor" viewBox="0 0 24 24" style="width: 16px; height: 16px;">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+            </svg>
+          </a>
+        </div>
+
         <!-- Section 1: Overview -->
         <div class="modal-section-block">
           <h4>Dataset &amp; Problem Framing</h4>
           <p>
-            Trained on the Kaggle Car Price Prediction Challenge dataset containing <strong>19,237 records and 18 columns</strong> before preprocessing.
-            The goal is to build an end-to-end regression model capable of predicting the price of a used car based on vehicle characteristics such as
-            production year, mileage, engine volume, fuel type, gearbox, drive wheels, and vehicle specifications. After preprocessing and encoding,
+            Trained on the Kaggle Car Price Prediction Challenge dataset containing <strong>19,237 records and 18
+              columns</strong> before preprocessing.
+            The goal is to build an end-to-end regression model capable of predicting the price of a used car based on
+            vehicle characteristics such as
+            production year, mileage, engine volume, fuel type, gearbox, drive wheels, and vehicle specifications. After
+            preprocessing and encoding,
             the dataset contains <strong>18,923 records and 52 columns</strong> (51 features plus target).
           </p>
         </div>
@@ -1427,12 +1504,22 @@
           <h4>Data Cleaning &amp; Feature Engineering Pipeline</h4>
           <ul
             style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.92rem; color: var(--text-secondary); margin-left: 1.25rem; list-style: disc;">
-            <li><strong>Duplicate &amp; Identifier Removal:</strong> Removed duplicate records and the uninformative <code>ID</code> column.</li>
-            <li><strong>Missing-Value &amp; Numerical Handling:</strong> Imputed missing entries and cleaned/converted formatted numerical features into appropriate quantitative types.</li>
-            <li><strong>Categorical Combination:</strong> Merged car manufacturer and model information into a cohesive vehicle descriptor to preserve brand and model lineage.</li>
-            <li><strong>High-Cardinality Target Encoding:</strong> Applied Target Encoding to the high-cardinality "Car" feature using Category Encoders (applied to full dataset before train/test split).</li>
-            <li><strong>Low-Price Inspection &amp; Outlier Management:</strong> Statistically analyzed 1,633 records (~8.6% of data) priced below 500. They shared the same median production year (2012) and moderate mileage (median ~149k km vs 125k km) and engine volume (2.4 vs 2.0), so they were retained without synthetic distortion. Removed an extreme price outlier.</li>
-            <li><strong>Train / Test Split &amp; Scaling:</strong> Partitioned using a <strong>75/25 split</strong>. Standardized scale-sensitive models (SGD Regressor, Lasso, Ridge, KNN) using <code>StandardScaler</code> fitted strictly on the training set.</li>
+            <li><strong>Duplicate &amp; Identifier Removal:</strong> Removed duplicate records and the uninformative
+              <code>ID</code> column.
+            </li>
+            <li><strong>Missing-Value &amp; Numerical Handling:</strong> Imputed missing entries and cleaned/converted
+              formatted numerical features into appropriate quantitative types.</li>
+            <li><strong>Categorical Combination:</strong> Merged car manufacturer and model information into a cohesive
+              vehicle descriptor to preserve brand and model lineage.</li>
+            <li><strong>High-Cardinality Target Encoding:</strong> Applied Target Encoding to the high-cardinality "Car"
+              feature using Category Encoders (applied to full dataset before train/test split).</li>
+            <li><strong>Low-Price Inspection &amp; Outlier Management:</strong> Statistically analyzed 1,633 records
+              (~8.6% of data) priced below 500. They shared the same median production year (2012) and moderate mileage
+              (median ~149k km vs 125k km) and engine volume (2.4 vs 2.0), so they were retained without synthetic
+              distortion. Removed an extreme price outlier.</li>
+            <li><strong>Train / Test Split &amp; Scaling:</strong> Partitioned using a <strong>75/25 split</strong>.
+              Standardized scale-sensitive models (SGD Regressor, Lasso, Ridge, KNN) using <code>StandardScaler</code>
+              fitted strictly on the training set.</li>
           </ul>
         </div>
 
@@ -1440,7 +1527,9 @@
         <div class="modal-section-block">
           <h4>Model Comparison (5-Fold Cross-Validation on 9 Regressors)</h4>
           <p style="margin-bottom: 0.75rem;">
-            Nine regression models were tuned using <code>GridSearchCV</code> with <strong>5-Fold Cross-Validation</strong> and <strong>R²</strong> as the evaluation metric. Linear models performed far below tree-based algorithms, indicating non-linear relationships:
+            Nine regression models were tuned using <code>GridSearchCV</code> with <strong>5-Fold
+              Cross-Validation</strong> and <strong>R²</strong> as the evaluation metric. Linear models performed far
+            below tree-based algorithms, indicating non-linear relationships:
           </p>
           <div class="table-responsive">
             <table class="comparison-table">
@@ -1481,7 +1570,8 @@
                   <td><strong>Random Forest Regressor</strong> &starf;</td>
                   <td>Ensemble Bagging</td>
                   <td class="num-col"><strong>0.7175</strong></td>
-                  <td><strong>Selected Winning Model</strong> &mdash; Achieved best test generalization &amp; lowest overfitting gap</td>
+                  <td><strong>Selected Winning Model</strong> &mdash; Achieved best test generalization &amp; lowest
+                    overfitting gap</td>
                 </tr>
                 <tr>
                   <td>Gradient Boosting Regressor</td>
@@ -1516,7 +1606,8 @@
         <div class="modal-section-block">
           <h4>Final Model Selection (Top 3 Test Set Evaluation)</h4>
           <p style="margin-bottom: 0.75rem;">
-            The three models with highest cross-validation R² were evaluated on the held-out test set to select the production model:
+            The three models with highest cross-validation R² were evaluated on the held-out test set to select the
+            production model:
           </p>
           <div class="table-responsive">
             <table class="comparison-table">
@@ -1563,7 +1654,10 @@
             </table>
           </div>
           <p style="font-size: 0.88rem; color: var(--text-secondary); margin-top: 0.6rem; line-height: 1.55;">
-            Although Gradient Boosting achieved the highest CV score (0.7581), <strong>Random Forest Regressor</strong> was chosen as the final model because it achieved the <strong>highest test R² (0.7488)</strong> and the <strong>smallest generalization gap (0.145)</strong> between train and test scores, demonstrating superior robustness against overfitting.
+            Although Gradient Boosting achieved the highest CV score (0.7581), <strong>Random Forest Regressor</strong>
+            was chosen as the final model because it achieved the <strong>highest test R² (0.7488)</strong> and the
+            <strong>smallest generalization gap (0.145)</strong> between train and test scores, demonstrating superior
+            robustness against overfitting.
           </p>
         </div>
 
@@ -1571,7 +1665,9 @@
         <div class="modal-section-block">
           <h4>Hyperparameter Tuning (GridSearchCV)</h4>
           <p>
-            <code>GridSearchCV</code> was used to tune the <strong>Random Forest Regressor</strong> using <strong>5-Fold Cross-Validation</strong> and <strong>R²</strong> as the scoring metric across <strong>144 parameter combinations</strong>:
+            <code>GridSearchCV</code> was used to tune the <strong>Random Forest Regressor</strong> using <strong>5-Fold
+              Cross-Validation</strong> and <strong>R²</strong> as the scoring metric across <strong>144 parameter
+              combinations</strong>:
           </p>
           <ul
             style="display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.88rem; color: var(--text-secondary); margin: 0.5rem 0 0.75rem 1.25rem; list-style: disc;">
@@ -1582,24 +1678,26 @@
             <li><code>max_features</code>: [0.7, 'sqrt']</li>
           </ul>
           <p style="margin-bottom: 0.5rem;">
-            <strong>Best GridSearchCV Score:</strong> <code style="color: var(--accent-primary); font-weight: 600;">R² = 0.7175</code>
+            <strong>Best GridSearchCV Score:</strong> <code
+              style="color: var(--accent-primary); font-weight: 600;">R² = 0.7175</code>
           </p>
           <div class="code-snippet-box">
-RandomForestRegressor(
-    n_estimators=500,
-    max_depth=15,
-    min_samples_split=5,
-    min_samples_leaf=2,
-    max_features=0.7,
-    random_state=33
-)</div>
+            RandomForestRegressor(
+            n_estimators=500,
+            max_depth=15,
+            min_samples_split=5,
+            min_samples_leaf=2,
+            max_features=0.7,
+            random_state=33
+            )</div>
         </div>
 
         <!-- Section 5: Final Model Evaluation Results -->
         <div class="modal-section-block">
           <h4>Final Model Results on Unseen Test Set</h4>
           <p style="margin-bottom: 0.75rem;">
-            The tuned Random Forest Regressor was evaluated on the held-out test set, achieving a <strong>Test R² of approximately 74.9%</strong>:
+            The tuned Random Forest Regressor was evaluated on the held-out test set, achieving a <strong>Test R² of
+              approximately 74.9%</strong>:
           </p>
           <div class="metrics-grid modal-metrics-grid">
             <div class="metric-item">
@@ -1624,9 +1722,13 @@ RandomForestRegressor(
             </div>
           </div>
           <p style="font-size: 0.88rem; color: var(--text-secondary); margin-top: 0.6rem; line-height: 1.55;">
-            The <strong>MAE of 4,521.31</strong> indicates that predictions deviate from actual car prices by approximately 4,521 on average in absolute terms.
-            The substantially lower <strong>Median Absolute Error (≈ 2,462)</strong> demonstrates that the vast majority of predictions closely track real transaction values, with larger residuals primarily driven by rare, high-luxury vehicles.
-            The <strong>Actual vs Predicted</strong> plot verified consistent alignment along the diagonal reference line across diverse price ranges.
+            The <strong>MAE of 4,521.31</strong> indicates that predictions deviate from actual car prices by
+            approximately 4,521 on average in absolute terms.
+            The substantially lower <strong>Median Absolute Error (≈ 2,462)</strong> demonstrates that the vast majority
+            of predictions closely track real transaction values, with larger residuals primarily driven by rare,
+            high-luxury vehicles.
+            The <strong>Actual vs Predicted</strong> plot verified consistent alignment along the diagonal reference
+            line across diverse price ranges.
           </p>
         </div>
 
@@ -1635,8 +1737,12 @@ RandomForestRegressor(
           <h4>Limitations &amp; Methodology Notes</h4>
           <ul
             style="display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.88rem; color: var(--text-secondary); margin-left: 1.25rem; list-style: disc;">
-            <li><strong>Target Encoding Leakage Consideration:</strong> The Target Encoding of the <code>Car</code> feature was fitted on the full dataset prior to train/test partitioning; fitting strictly within cross-validation folds represents an area for even stricter generalization guarantees.</li>
-            <li><strong>Low-Priced Outliers:</strong> Unusually low prices (&lt;500) were retained due to lack of an exclusionary empirical pattern, which naturally bounds the upper limit of achievable regression precision.</li>
+            <li><strong>Target Encoding Leakage Consideration:</strong> The Target Encoding of the <code>Car</code>
+              feature was fitted on the full dataset prior to train/test partitioning; fitting strictly within
+              cross-validation folds represents an area for even stricter generalization guarantees.</li>
+            <li><strong>Low-Priced Outliers:</strong> Unusually low prices (&lt;500) were retained due to lack of an
+              exclusionary empirical pattern, which naturally bounds the upper limit of achievable regression precision.
+            </li>
           </ul>
         </div>
 
@@ -1677,14 +1783,16 @@ RandomForestRegressor(
         <div class="modal-highlight-box">
           <div style="flex: 1; min-width: 240px;">
             <div style="font-weight: 700; color: var(--accent-primary); margin-bottom: 0.25rem; font-size: 0.95rem;">
-              🚀 Live Interactive Streamlit Web App Deployed
+              Live Interactive Streamlit Web App Deployed
             </div>
             <p style="margin: 0; font-size: 0.88rem; color: var(--text-secondary);">
-              Test the trained machine learning pipeline live: input customer attributes (tenure, contracts, internet services, charges) and receive instant churn predictions with calibrated probabilities.
+              Test the trained machine learning pipeline live: input customer attributes (tenure, contracts, internet
+              services, charges) and receive instant churn predictions with calibrated probabilities.
             </p>
           </div>
-          <a href="https://telcocustomerchurnclassification-123.streamlit.app/" target="_blank" rel="noopener noreferrer"
-            class="btn btn-primary" style="padding: 0.55rem 1.15rem; font-size: 0.88rem; flex-shrink: 0;">
+          <a href="https://telcocustomerchurnclassification-123.streamlit.app/" target="_blank"
+            rel="noopener noreferrer" class="btn btn-primary"
+            style="padding: 0.55rem 1.15rem; font-size: 0.88rem; flex-shrink: 0;">
             <span>Open Streamlit App</span>
             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round"
@@ -1697,12 +1805,20 @@ RandomForestRegressor(
         <div class="modal-section-block">
           <h4>Dataset &amp; Business Problem Framing</h4>
           <p>
-            Trained on the Kaggle Telco Customer Churn dataset comprising <strong>7,043 customer records and 21 features</strong> before preprocessing.
-            The target variable is binary: <code>Churn = 1</code> (Yes &mdash; customer churned) versus <code>Churn = 0</code> (No &mdash; retained).
-            Features span customer demographics, account tenure, phone and internet services, technical support, streaming add-ons, contract types, billing preferences, monthly charges, and total charges.
+            Trained on the Kaggle Telco Customer Churn dataset comprising <strong>7,043 customer records and 21
+              features</strong> before preprocessing.
+            The target variable is binary: <code>Churn = 1</code> (Yes &mdash; customer churned) versus
+            <code>Churn = 0</code> (No &mdash; retained).
+            Features span customer demographics, account tenure, phone and internet services, technical support,
+            streaming add-ons, contract types, billing preferences, monthly charges, and total charges.
           </p>
           <p>
-            <strong>Recall Prioritization Rationale:</strong> In telecom subscription economics, failing to identify an actual churner (a <em>False Negative</em>) causes permanent recurring revenue loss and forfeited customer lifetime value. Conversely, an incorrect churn prediction (a <em>False Positive</em>) merely triggers proactive retention engagement, customer outreach, or loyalty incentives. Consequently, <strong>Recall for the churn class</strong> was prioritized throughout cross-validation, hyperparameter tuning, and threshold selection.
+            <strong>Recall Prioritization Rationale:</strong> In telecom subscription economics, failing to identify an
+            actual churner (a <em>False Negative</em>) causes permanent recurring revenue loss and forfeited customer
+            lifetime value. Conversely, an incorrect churn prediction (a <em>False Positive</em>) merely triggers
+            proactive retention engagement, customer outreach, or loyalty incentives. Consequently, <strong>Recall for
+              the churn class</strong> was prioritized throughout cross-validation, hyperparameter tuning, and threshold
+            selection.
           </p>
         </div>
 
@@ -1714,9 +1830,16 @@ RandomForestRegressor(
           </p>
           <ul
             style="display: flex; flex-direction: column; gap: 0.45rem; font-size: 0.9rem; color: var(--text-secondary); margin-left: 1.25rem; list-style: disc; margin-bottom: 0.85rem;">
-            <li><strong>Numerical Distributions:</strong> Analyzed via histograms and boxplots. Customers with shorter tenure tend to churn noticeably more frequently. Likewise, higher monthly charges strongly correlate with increased churn likelihood.</li>
-            <li><strong>Categorical &amp; Bivariate Trends:</strong> Countplots and cross-tabulations demonstrated marked churn divergence across Contract types (Month-to-month shows high churn vs. Two-year), Internet Service (Fiber optic customers churn at higher rates), and Payment Method (Electronic check users have the highest churn rate).</li>
-            <li><strong>Feature Pruning:</strong> During EDA, <code>gender</code> showed limited impact on churn with virtually identical churn distributions across cohorts. It was removed from the final feature set to simplify the model.</li>
+            <li><strong>Numerical Distributions:</strong> Analyzed via histograms and boxplots. Customers with shorter
+              tenure tend to churn noticeably more frequently. Likewise, higher monthly charges strongly correlate with
+              increased churn likelihood.</li>
+            <li><strong>Categorical &amp; Bivariate Trends:</strong> Countplots and cross-tabulations demonstrated
+              marked churn divergence across Contract types (Month-to-month shows high churn vs. Two-year), Internet
+              Service (Fiber optic customers churn at higher rates), and Payment Method (Electronic check users have the
+              highest churn rate).</li>
+            <li><strong>Feature Pruning:</strong> During EDA, <code>gender</code> showed limited impact on churn with
+              virtually identical churn distributions across cohorts. It was removed from the final feature set to
+              simplify the model.</li>
           </ul>
 
           <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0.5rem;">
@@ -1728,8 +1851,11 @@ RandomForestRegressor(
             <li>Converted <code>TotalCharges</code> to numeric, handling blank/whitespace values.</li>
             <li>Set <code>TotalCharges</code> to 0 for customers with blank charges.</li>
             <li>Set <code>tenure</code> to 0 when <code>TotalCharges</code> was 0.</li>
-            <li>Estimated missing <code>tenure</code> values using <code>TotalCharges</code> and <code>MonthlyCharges</code>.</li>
-            <li>Estimated missing <code>MonthlyCharges</code> using <code>TotalCharges</code> and <code>tenure</code>.</li>
+            <li>Estimated missing <code>tenure</code> values using <code>TotalCharges</code> and
+              <code>MonthlyCharges</code>.
+            </li>
+            <li>Estimated missing <code>MonthlyCharges</code> using <code>TotalCharges</code> and <code>tenure</code>.
+            </li>
             <li>Replaced <code>No internet service</code> with <code>No</code> for the relevant service features.</li>
             <li>Replaced <code>No phone service</code> with <code>No</code> in <code>MultipleLines</code>.</li>
             <li>Removed duplicate rows.</li>
@@ -1740,32 +1866,50 @@ RandomForestRegressor(
         <div class="modal-section-block">
           <h4>Feature Preprocessing &amp; Selection Pipeline</h4>
           <p style="margin-bottom: 0.6rem;">
-            Features were systematically grouped and passed through a unified Scikit-learn <code>ColumnTransformer</code> and <code>SelectKBest</code> pipeline to ensure reproducible transformations with zero data leakage:
+            Features were systematically grouped and passed through a unified Scikit-learn
+            <code>ColumnTransformer</code> and <code>SelectKBest</code> pipeline to ensure reproducible transformations
+            with zero data leakage:
           </p>
           <ul
             style="display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.88rem; color: var(--text-secondary); margin-left: 1.25rem; list-style: disc; margin-bottom: 0.75rem;">
-            <li><strong>Binary Features (11):</strong> <code>Partner</code>, <code>Dependents</code>, <code>PhoneService</code>, <code>MultipleLines</code>, <code>OnlineSecurity</code>, <code>OnlineBackup</code>, <code>DeviceProtection</code>, <code>TechSupport</code>, <code>StreamingTV</code>, <code>StreamingMovies</code>, <code>PaperlessBilling</code> &rarr; Imputed and encoded.</li>
-            <li><strong>Categorical Features (3):</strong> <code>InternetService</code>, <code>Contract</code>, <code>PaymentMethod</code> &rarr; Handled via <code>OrdinalEncoder</code> and <code>OneHotEncoder</code>.</li>
-            <li><strong>Numerical Features (3):</strong> <code>tenure</code>, <code>MonthlyCharges</code>, <code>TotalCharges</code> &rarr; Scaled with <code>StandardScaler</code> after imputation.</li>
-            <li><strong>Integrated Feature Selection:</strong> Implemented <code>SelectKBest(score_func=f_classif)</code> inside the cross-validation pipeline, evaluating <code>k &isin; [5, 10, 15, 20, 'all']</code> to systematically pinpoint the most discriminative feature subset.</li>
-            <li><strong>Stratified Train / Test Split:</strong> Partitioned 75% Training Data and 25% Test Data using a stratified split to preserve the natural churn class distribution across sets:</li>
+            <li><strong>Binary Features (11):</strong> <code>Partner</code>, <code>Dependents</code>,
+              <code>PhoneService</code>, <code>MultipleLines</code>, <code>OnlineSecurity</code>,
+              <code>OnlineBackup</code>, <code>DeviceProtection</code>, <code>TechSupport</code>,
+              <code>StreamingTV</code>, <code>StreamingMovies</code>, <code>PaperlessBilling</code> &rarr; Imputed and
+              encoded.
+            </li>
+            <li><strong>Categorical Features (3):</strong> <code>InternetService</code>, <code>Contract</code>,
+              <code>PaymentMethod</code> &rarr; Handled via <code>OrdinalEncoder</code> and <code>OneHotEncoder</code>.
+            </li>
+            <li><strong>Numerical Features (3):</strong> <code>tenure</code>, <code>MonthlyCharges</code>,
+              <code>TotalCharges</code> &rarr; Scaled with <code>StandardScaler</code> after imputation.
+            </li>
+            <li><strong>Integrated Feature Selection:</strong> Implemented
+              <code>SelectKBest(score_func=f_classif)</code> inside the cross-validation pipeline, evaluating
+              <code>k &isin; [5, 10, 15, 20, 'all']</code> to systematically pinpoint the most discriminative feature
+              subset.
+            </li>
+            <li><strong>Stratified Train / Test Split:</strong> Partitioned 75% Training Data and 25% Test Data using a
+              stratified split to preserve the natural churn class distribution across sets:</li>
           </ul>
           <div class="code-snippet-box">train_test_split(
-    X,
-    y,
-    test_size=0.25,
-    random_state=44,
-    shuffle=True,
-    stratify=y
-)
-# Target mapping: Yes → 1, No → 0</div>
+            X,
+            y,
+            test_size=0.25,
+            random_state=44,
+            shuffle=True,
+            stratify=y
+            )
+            # Target mapping: Yes → 1, No → 0</div>
         </div>
 
         <!-- Section 4: Models Benchmarked via 5-Fold Cross-Validation -->
         <div class="modal-section-block">
           <h4>Model Benchmarking (5-Fold Cross-Validation on 5 Classifiers)</h4>
           <p style="margin-bottom: 0.75rem;">
-            Five classification algorithms were trained and tuned using <code>GridSearchCV</code> with <strong>5-Fold Cross-Validation</strong>, optimizing specifically for <strong>Recall</strong>. Each model was implemented as an encapsulated <code>Pipeline</code> containing preprocessing, feature selection, and the classifier:
+            Five classification algorithms were trained and tuned using <code>GridSearchCV</code> with <strong>5-Fold
+              Cross-Validation</strong>, optimizing specifically for <strong>Recall</strong>. Each model was implemented
+            as an encapsulated <code>Pipeline</code> containing preprocessing, feature selection, and the classifier:
           </p>
           <div class="table-responsive">
             <table class="comparison-table">
@@ -1782,7 +1926,8 @@ RandomForestRegressor(
                   <td><strong>Logistic Regression</strong> &starf;</td>
                   <td>Linear Classifier</td>
                   <td>Recall-Optimized</td>
-                  <td><strong>Selected Final Model:</strong> Highest cross-validation recall; superior calibration and inference speed</td>
+                  <td><strong>Selected Final Model:</strong> Highest cross-validation recall; superior calibration and
+                    inference speed</td>
                 </tr>
                 <tr>
                   <td>Support Vector Classifier (SVC)</td>
@@ -1817,7 +1962,9 @@ RandomForestRegressor(
         <div class="modal-section-block">
           <h4>Final Model Selection &amp; Test Set Evaluation</h4>
           <p style="margin-bottom: 0.75rem;">
-            Logistic Regression and SVC achieved the highest cross-validation recall among the tested models. Both were evaluated on the test set across multiple metrics. Logistic Regression was selected as the final model, prioritizing Recall for the Churn class:
+            Logistic Regression and SVC achieved the highest cross-validation recall among the tested models. Both were
+            evaluated on the test set across multiple metrics. Logistic Regression was selected as the final model,
+            prioritizing Recall for the Churn class:
           </p>
           <div class="metrics-grid modal-metrics-grid">
             <div class="metric-item">
@@ -1842,15 +1989,21 @@ RandomForestRegressor(
             </div>
           </div>
 
-          <h5 style="font-size: 0.95rem; font-weight: 600; color: var(--text-primary); margin: 1.25rem 0 0.5rem;">Confusion Matrix &amp; Error Analysis</h5>
+          <h5 style="font-size: 0.95rem; font-weight: 600; color: var(--text-primary); margin: 1.25rem 0 0.5rem;">
+            Confusion Matrix &amp; Error Analysis</h5>
           <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 0.6rem; line-height: 1.55;">
             The confusion matrix was used to examine predictions across all four quadrants:
           </p>
           <ul
             style="display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.88rem; color: var(--text-secondary); margin-left: 1.25rem; list-style: disc;">
-            <li><strong>True Positives (Identified Churners):</strong> 86.42% of actual churners are successfully identified, allowing retention specialists to take targeted proactive action.</li>
-            <li><strong>False Negatives (Missed Churners):</strong> Minimized to only 13.58% of churn cases. In churn prediction, False Negatives represent missed churners who leave the platform unnoticed, causing severe recurring revenue loss.</li>
-            <li><strong>False Positives (Retained Customers Flagged):</strong> A 47.01% precision rate indicates manageable false alarms, which carry low operational cost in customer success workflows compared to losing recurring customer lifetime value.</li>
+            <li><strong>True Positives (Identified Churners):</strong> 86.42% of actual churners are successfully
+              identified, allowing retention specialists to take targeted proactive action.</li>
+            <li><strong>False Negatives (Missed Churners):</strong> Minimized to only 13.58% of churn cases. In churn
+              prediction, False Negatives represent missed churners who leave the platform unnoticed, causing severe
+              recurring revenue loss.</li>
+            <li><strong>False Positives (Retained Customers Flagged):</strong> A 47.01% precision rate indicates
+              manageable false alarms, which carry low operational cost in customer success workflows compared to losing
+              recurring customer lifetime value.</li>
           </ul>
         </div>
 
@@ -1858,7 +2011,8 @@ RandomForestRegressor(
         <div class="modal-section-block">
           <h4>Classification Threshold Analysis (Precision vs. Recall Trade-Off)</h4>
           <p style="margin-bottom: 0.75rem;">
-            Different probability classification thresholds were tested to examine the trade-off between Precision, Recall, and F1-score:
+            Different probability classification thresholds were tested to examine the trade-off between Precision,
+            Recall, and F1-score:
           </p>
           <div class="table-responsive">
             <table class="comparison-table">
@@ -1891,14 +2045,16 @@ RandomForestRegressor(
                   <td class="num-col"><strong>47.0%</strong></td>
                   <td class="num-col"><strong>86.4%</strong></td>
                   <td class="num-col"><strong>60.9%</strong></td>
-                  <td><strong>Retained Production Threshold: Prioritizes high Recall (86.4%) while maintaining solid F1 balance</strong></td>
+                  <td><strong>Retained Production Threshold: Prioritizes high Recall (86.4%) while maintaining solid F1
+                      balance</strong></td>
                 </tr>
                 <tr>
                   <td class="num-col">0.6</td>
                   <td class="num-col">56.9%</td>
                   <td class="num-col">71.8%</td>
                   <td class="num-col">63.5%</td>
-                  <td>Higher F1-score (63.5%), but sharply reduces Recall from 86.4% down to 71.8% (misses ~28.2% of churners)</td>
+                  <td>Higher F1-score (63.5%), but sharply reduces Recall from 86.4% down to 71.8% (misses ~28.2% of
+                    churners)</td>
                 </tr>
                 <tr>
                   <td class="num-col">0.7</td>
@@ -1911,7 +2067,9 @@ RandomForestRegressor(
             </table>
           </div>
           <p style="font-size: 0.88rem; color: var(--text-secondary); margin-top: 0.6rem; line-height: 1.55;">
-            A threshold of <strong>0.5 was retained for the final model</strong> because Recall is the primary metric in this project. Although a threshold of 0.6 produced a higher F1-score, it reduced Recall from <strong>86.4% to 71.8%</strong>, which would allow too many actual churners to be missed.
+            A threshold of <strong>0.5 was retained for the final model</strong> because Recall is the primary metric in
+            this project. Although a threshold of 0.6 produced a higher F1-score, it reduced Recall from <strong>86.4%
+              to 71.8%</strong>, which would allow too many actual churners to be missed.
           </p>
         </div>
 
@@ -1919,18 +2077,20 @@ RandomForestRegressor(
         <div class="modal-section-block">
           <h4>ROC-AUC &amp; Pipeline Serialization (Joblib)</h4>
           <p>
-            The final Logistic Regression model achieved a <strong>ROC-AUC of 0.842 (84.20%)</strong>. The ROC curve was plotted using predicted probabilities to evaluate the model's ability to distinguish between churn and non-churn customers across different classification thresholds.
+            The final Logistic Regression model achieved a <strong>ROC-AUC of 0.842 (84.20%)</strong>. The ROC curve was
+            plotted using predicted probabilities to evaluate the model's ability to distinguish between churn and
+            non-churn customers across different classification thresholds.
           </p>
           <p style="margin-top: 0.5rem; margin-bottom: 0.5rem;">
             The complete trained pipeline was serialized using <code>joblib</code>:
           </p>
           <div class="code-snippet-box">import joblib
 
-# Extract best estimator containing ColumnTransformer + SelectKBest + LogisticRegression
-final_model = logistic_grid.best_estimator_
+            # Extract best estimator containing ColumnTransformer + SelectKBest + LogisticRegression
+            final_model = logistic_grid.best_estimator_
 
-# Serialize complete end-to-end pipeline
-joblib.dump(final_model, "telco_churn_model.pkl")</div>
+            # Serialize complete end-to-end pipeline
+            joblib.dump(final_model, "telco_churn_model.pkl")</div>
           <p style="font-size: 0.88rem; color: var(--text-secondary); margin-top: 0.5rem;">
             The saved pipeline contains the preprocessing, feature selection, and Logistic Regression model.
           </p>
@@ -1940,24 +2100,32 @@ joblib.dump(final_model, "telco_churn_model.pkl")</div>
         <div class="modal-section-block">
           <h4>Streamlit Web Application &amp; Production Deployment</h4>
           <p>
-            A Streamlit application was created to allow users to enter customer information and receive an immediate churn prediction. The application uses the saved machine learning pipeline to process the input and predict whether the customer is likely to churn.
+            A Streamlit application was created to allow users to enter customer information and receive an immediate
+            churn prediction. The application uses the saved machine learning pipeline to process the input and predict
+            whether the customer is likely to churn.
           </p>
           <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0.5rem;">
             <strong>Intelligent Dependent Input Handling:</strong>
           </p>
           <ul
             style="display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.88rem; color: var(--text-secondary); margin-left: 1.25rem; list-style: disc; margin-bottom: 0.85rem;">
-            <li>When <code>InternetService</code> is <code>No</code>, internet-related services are automatically set to <code>No</code>.</li>
-            <li>When <code>PhoneService</code> is <code>No</code>, <code>MultipleLines</code> is automatically set to <code>No</code>.</li>
+            <li>When <code>InternetService</code> is <code>No</code>, internet-related services are automatically set to
+              <code>No</code>.
+            </li>
+            <li>When <code>PhoneService</code> is <code>No</code>, <code>MultipleLines</code> is automatically set to
+              <code>No</code>.
+            </li>
           </ul>
 
-          <div style="background: var(--bg-surface-elevated); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 0.85rem 1.15rem; font-family: var(--font-mono); font-size: 0.82rem; color: var(--text-secondary); line-height: 1.6;">
+          <div
+            style="background: var(--bg-surface-elevated); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 0.85rem 1.15rem; font-family: var(--font-mono); font-size: 0.82rem; color: var(--text-secondary); line-height: 1.6;">
             <strong>Project Structure:</strong><br>
             Telco_Customer_Churn_classification/<br>
             │<br>
             ├── README.md<br>
             ├── Telco_Customer_Churn.ipynb<br>
-            ├── app.py &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Streamlit Web Application<br>
+            ├── app.py &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#
+            Streamlit Web Application<br>
             ├── telco_churn_model.pkl &nbsp;&nbsp;# Serialized ML Pipeline<br>
             ├── requirements.txt<br>
             ├── telco_data.csv<br>
@@ -1966,16 +2134,16 @@ joblib.dump(final_model, "telco_churn_model.pkl")</div>
         </div>
 
         <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.5rem;">
-          <a href="https://telcocustomerchurnclassification-123.streamlit.app/" target="_blank" rel="noopener noreferrer"
-            class="btn btn-primary" style="padding: 0.6rem 1.2rem; font-size: 0.9rem;">
+          <a href="https://telcocustomerchurnclassification-123.streamlit.app/" target="_blank"
+            rel="noopener noreferrer" class="btn btn-primary" style="padding: 0.6rem 1.2rem; font-size: 0.9rem;">
             <span>Try Streamlit Live App</span>
             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round"
                 d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
             </svg>
           </a>
-          <a href="https://github.com/mohamedkaboshrief/Telco_Customer_Churn_classification" target="_blank" rel="noopener noreferrer"
-            class="btn btn-outline" style="padding: 0.6rem 1.2rem; font-size: 0.9rem;">
+          <a href="https://github.com/mohamedkaboshrief/Telco_Customer_Churn_classification" target="_blank"
+            rel="noopener noreferrer" class="btn btn-outline" style="padding: 0.6rem 1.2rem; font-size: 0.9rem;">
             <span>GitHub Repository</span>
             <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
               <path fill-rule="evenodd" clip-rule="evenodd"

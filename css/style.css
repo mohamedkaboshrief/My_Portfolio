@@ -1291,8 +1291,9 @@ ul {
 .project-details-list {
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 0.5rem;
   margin-bottom: 1rem;
+  flex: 1 1 auto;
 }
 
 .detail-item {
