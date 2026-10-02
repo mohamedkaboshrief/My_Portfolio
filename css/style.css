@@ -2080,9 +2080,9 @@ dialog#churn-project-modal {
   color: var(--text-primary);
   border: 1px solid var(--border-accent);
   border-radius: var(--radius-lg);
-  max-width: 660px;
-  width: 88vw;
-  max-height: 80vh;
+  max-width: 740px;
+  width: 90vw;
+  max-height: 84vh;
   overflow: hidden;
   box-shadow: var(--shadow-lg);
 }
@@ -2221,6 +2221,29 @@ dialog#churn-project-modal::backdrop {
   white-space: pre;
   color: var(--accent-primary);
   overflow-x: auto;
+}
+
+.modal-highlight-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.12) 0%, rgba(217, 119, 6, 0.06) 100%);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  flex-wrap: wrap;
+}
+
+.modal-highlight-box p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--text-primary);
+  line-height: 1.55;
+}
+
+.modal-highlight-box strong {
+  color: var(--accent-primary);
 }
 
 /* --- Toast Notification Component --- */
